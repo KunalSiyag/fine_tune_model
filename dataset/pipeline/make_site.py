@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One-liner in, QA-passed website out: the whole product in one command.
 
-    .venv/bin/python dataset/pipeline/make_site.py "a site for my bakery in Pune" --name bakery
+    .venv/bin/python dataset/pipeline/make_site.py "a site for my bakery in Pune" --name bakery --k 5 --judge
     .venv/bin/python dataset/pipeline/make_site.py --batch dataset/briefs/test_oneliners.txt --name test1
 
 Per request:
@@ -108,6 +108,8 @@ def main():
     ap.add_argument("--spec-seed", type=int, default=7, help="which few-shot examples Gemma sees")
     ap.add_argument("--top-up", type=int, default=3, help="extra drafts for a weak or failing request")
     ap.add_argument("--top-up-rounds", type=int, default=1)
+    ap.add_argument("--good", type=int, default=6, help="judge score below which a pick counts as weak")
+    ap.add_argument("--same-spec", action="store_true", help="top up from the original spec instead of a fresh one")
     ap.add_argument("--html-first", action="store_true",
                     help="start the reply with index.html so the JS is written after the elements it selects")
     args = ap.parse_args()
@@ -180,14 +182,24 @@ def main():
         best = qa(out, new)
 
     # 5. Gemma judges taste between passing drafts; a request whose pick fails or looks weak
-    #    (< 6/10) gets --top-up more drafts, up to --top-up-rounds times
+    #    (< --good, default 6/10) gets --top-up more drafts, up to --top-up-rounds times. By default those drafts
+    #    come from a fresh spec: on the held-out set, a new spec turned 3 of 5 weak requests good
+    #    where 3 more drafts from the old spec turned none.
     if args.judge:
         best = qa(out, [], judge=True)
-        for _ in range(args.top_up_rounds):
+        for rnd in range(args.top_up_rounds):
             weak = [r for r in rows if not best["per_prompt"][r["id"]]["pass"]
-                    or best["per_prompt"][r["id"]]["judge"].get(best["per_prompt"][r["id"]]["best"], {}).get("score", 0) < 6]
+                    or best["per_prompt"][r["id"]]["judge"].get(best["per_prompt"][r["id"]]["best"], {}).get("score", 0) < args.good]
             if not weak:
                 break
+            if not args.same_spec:
+                for r in weak:
+                    req = (out / r["id"] / "request.txt").read_text()
+                    spec = brief_gemma.write_spec(
+                        req, brief_gemma.few_shot_pairs(3, f"{args.spec_seed + rnd + 1}:{req}"), 0.7)
+                    (out / r["id"] / f"spec-{rnd + 2}.txt").write_text(spec)
+                    r["messages"] = brief_gemma.prompt_record(r["id"], spec)["messages"]
+                    print(f"[respec] {r['id']}")
             n = {r["id"]: len(drafts(out, r["id"])) for r in weak}
             for start in sorted(set(n.values())):
                 group = [r for r in weak if n[r["id"]] == start]
@@ -199,10 +211,10 @@ def main():
             best = qa(out, new, judge=True)
 
     passed = sum(v["pass"] for v in best["per_prompt"].values())
-    good = sum(v["pass"] and v.get("judge", {}).get(v["best"], {}).get("score", 0) >= 6
+    good = sum(v["pass"] and v.get("judge", {}).get(v["best"], {}).get("score", 0) >= args.good
                for v in best["per_prompt"].values())
     print(f"\n{passed}/{len(rows)} requests have a passing site"
-          f"{f', {good} judged good (≥6/10)' if args.judge else ''} ({time.time() - t0:.0f}s, "
+          f"{f', {good} judged good (≥{args.good}/10)' if args.judge else ''} ({time.time() - t0:.0f}s, "
           f"Tinker ≈ ${sum(tokens) * PRICE['sample'] / 1e6:.2f}). Pages: {out.relative_to(ROOT)}/<id>/best/index.html")
 
 
