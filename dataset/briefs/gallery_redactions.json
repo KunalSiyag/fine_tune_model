@@ -1,0 +1,9 @@
+{
+  "_why": "Edits made to the published gallery copies only (model output is kept as generated in dataset/runs). Found by reading every live site before publishing.",
+  "07-a-page-for-our-school": [
+    ["Ms. P. Voda<br>4127 Winding Lane<br>Indianapolis, IN 46250", "Ms. P. Voda<br>[street address removed]<br>Indianapolis, IN"]
+  ],
+  "09-my-indie-band-s-page": [
+    ["data[i] = Math.random() * 2 - 1;", "data[i] = (Math.random() * 2 - 1) * 0.08; // gallery copy: full-scale white noise turned down"]
+  ]
+}

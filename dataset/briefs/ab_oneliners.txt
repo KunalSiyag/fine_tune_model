@@ -1,0 +1,9 @@
+# A/B test requests: typed the way a small-business owner would. One per line.
+a website for my small bakery in Pune that sells sourdough and takes weekend pre-orders
+landing page for my yoga classes for people over 60, mornings only, first class free
+i fix bicycles from my garage in Bristol, need a simple site with prices and how to book
+site for a home tiffin service in Bengaluru, veg and non-veg plans, monthly subscription
+portfolio for a freelance wedding photographer who also shoots small elopements
+a page for our community tool library where neighbours borrow drills, ladders and tents
+my tattoo studio in Lisbon does fine-line work, need a site showing flash designs and booking rules
+website for a one-person accounting practice that does GST filing for small shops

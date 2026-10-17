@@ -1,0 +1,17 @@
+# Held-out test requests for make_site.py. Written before seeing any output; never tune prompts on these.
+a page for my dog grooming van in Leeds, show prices by dog size and let people pick a slot
+my grandmother's pickle business in Jaipur, mango and lime pickles, orders on whatsapp
+landing page for a weekend pottery class for beginners, 6 seats, clay and firing included
+website for a repair cafe in Utrecht where volunteers fix toasters and lamps for free
+i teach spanish online to adults, need a page with my packages and a level quiz
+site for a food truck selling momos around Kathmandu, today's location and the menu
+a page for our school's robotics club fundraiser, we need 2000 dollars for a competition trip
+physiotherapy clinic for runners in Melbourne, services, prices and how to book
+my indie band's page, new EP out in november, tour dates and a mailing list
+coworking space in a converted warehouse in Kochi, day passes and monthly desks
+a houseplant shop that delivers in Toronto, care levels for each plant and a plant finder
+landing page for a free app that splits rent and bills between flatmates
+wedding venue on a tea estate near Munnar, packages, capacity and the season calendar
+a page for a sunday running club in Nairobi, routes, paces and how to join
+second-hand textbook exchange for university students in Dhaka
+a small museum of old radios in Turin, opening hours, tickets and the collection

@@ -1,0 +1,43 @@
+# 18GB local ComfyUI install — never commit this
+ComfyUI/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Node (gallery is vanilla, but guard for future tooling)
+node_modules/
+dist/
+.build/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ComfyUI outputs & models (in case anyone runs it locally)
+**/output/
+**/input/
+**/models/
+**/*.safetensors
+**/*.ckpt
+**/*.pt
+**/*.bin
+
+# Logs & temp
+*.log
+*.tmp
+
+# dataset: regenerable artefacts + untrusted downloads
+dataset/renders/
+dataset/raw/
+dataset/runs/
+dataset/.pollinations.lock
+dataset/out-htmlfirst/

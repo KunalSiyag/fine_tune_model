@@ -1,0 +1,177 @@
+<title>Sixteen Unseen Briefs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a proof sheet. Each request is one numbered frame: the client's words, then the site
+   it became, marked up the way a contact sheet is marked: grease pencil on the picks. */
+:root {
+  --paper: #edf0ee;
+  --sheet: #f8faf8;
+  --ink: #15191c;
+  --muted: #59626a;
+  --rule: #cfd6d2;
+  --pencil: #c8322a;
+  --pass: #24734a;
+  --weak: #9a6510;
+  --fail: #a3302a;
+  --chip: #e1e7e3;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121517; --sheet: #1a1e21; --ink: #e8ece9; --muted: #9aa4ab; --rule: #2e3539;
+    --pencil: #ff6b5e; --pass: #5fc28c; --weak: #e0a84a; --fail: #ff7a70; --chip: #252b2f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121517; --sheet: #1a1e21; --ink: #e8ece9; --muted: #9aa4ab; --rule: #2e3539;
+  --pencil: #ff6b5e; --pass: #5fc28c; --weak: #e0a84a; --fail: #ff7a70; --chip: #252b2f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 48px 64px; display: grid; gap: 40px; }
+header { display: grid; gap: 18px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lede { max-width: 62ch; font-size: 1.1rem; margin: 0; color: var(--ink); }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.facts b { color: var(--ink); font-weight: 600; font-size: 15px; }
+.pipeline { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-family: var(--mono); font-size: 12.5px; padding-block: 14px; border-block: 1px solid var(--rule); }
+.pipeline span { background: var(--sheet); border: 1px solid var(--rule); padding: 3px 8px; border-radius: 3px; }
+.pipeline i { color: var(--muted); font-style: normal; }
+.pipeline .gemma { border-color: var(--pencil); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button {
+  font: 600 13px var(--mono); color: var(--ink); background: transparent; border: 1px solid var(--rule);
+  padding: 7px 12px; border-radius: 999px; cursor: pointer; font-variant-numeric: tabular-nums;
+}
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.filters button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--pencil); outline-offset: 2px; }
+.sheet { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: 28px; }
+.frame { background: var(--sheet); border: 1px solid var(--rule); padding: 18px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.num { font-family: var(--mono); font-weight: 600; font-size: 13px; color: var(--muted); margin-right: 4px; font-variant-numeric: tabular-nums; }
+.chip { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; padding: 2px 8px; border-radius: 3px; background: var(--chip); color: var(--muted); }
+.chip.pass { color: var(--pass); } .chip.fail { color: var(--fail); } .chip.weak { color: var(--weak); }
+.chip.good { color: var(--pass); }
+.quote { font-family: var(--display); font-weight: 600; font-size: 1.28rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+.quote::before { content: "\201C"; color: var(--pencil); }
+.quote::after { content: "\201D"; color: var(--pencil); }
+.shot { position: relative; display: block; border: 1px solid var(--rule); background: var(--paper); aspect-ratio: 16 / 10; max-width: 100%; overflow: hidden; }
+.shot img.d { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.shot img.m { position: absolute; right: 10px; bottom: 10px; width: 17%; border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 6px 18px rgb(0 0 0 / .22); background: var(--sheet); }
+a.shot.picked { outline: 3px solid var(--pencil); outline-offset: 3px; }
+.verdict { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 0; }
+.verdict b { color: var(--ink); font-weight: 600; }
+.errors { font-family: var(--mono); font-size: 12px; color: var(--fail); margin: 0; overflow-wrap: anywhere; }
+.open { font-family: var(--mono); font-size: 13px; color: var(--pencil); font-weight: 600; text-decoration: none; }
+.open:hover { text-decoration: underline; }
+details { border-top: 1px dashed var(--rule); padding-top: 10px; }
+summary { cursor: pointer; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+details p { font-size: 14px; color: var(--ink); max-width: 68ch; margin: 10px 0 0; }
+footer { display: grid; gap: 10px; font-size: 14px; color: var(--muted); max-width: 72ch; border-top: 1px solid var(--rule); padding-top: 22px; }
+footer p { margin: 0; }
+.empty { color: var(--muted); font-family: var(--mono); font-size: 13px; }
+@media (prefers-reduced-motion: no-preference) {
+  .frame { transition: border-color .15s; } .frame:hover { border-color: var(--muted); }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Held-out test · Hacktoberfest Open-Source AI · Qwen3-8B LoRA + Gemma 4</div>
+    <h1>Sixteen unseen briefs</h1>
+    <p class="lede">Each request below is one sentence a small-business owner might type. They were written before the model saw them, and nothing in the pipeline was tuned on them. Every result is shown, including the ones that didn't work.</p>
+    <div class="facts" id="facts"></div>
+    <div class="pipeline" aria-label="Pipeline">
+      <span>one-liner</span><i>→</i><span class="gemma">Gemma 4 writes the spec</span><i>→</i>
+      <span>Qwen3-8B + LoRA writes 5 drafts</span><i>→</i><span>headless Chrome QA</span><i>→</i>
+      <span class="gemma">Gemma fixes JS errors</span><i>→</i><span class="gemma">Gemma judges the first screen</span>
+    </div>
+  </header>
+
+  <div class="filters" role="group" aria-label="Show">
+    <button type="button" data-f="all">All</button>
+    <button type="button" data-f="good">Judged good</button>
+    <button type="button" data-f="weak">Works, judged weak</button>
+    <button type="button" data-f="fail">Didn't pass QA</button>
+  </div>
+
+  <main class="sheet" id="sheet"></main>
+
+  <footer>
+    <p>All businesses, names, prices and contact details on these pages are fictional and were written by the models. Links, forms and booking widgets are demos.</p>
+    <p><b>How a site is chosen.</b> QA renders every draft at 1440, 820 and 390 px and fails it on any JavaScript error, failed request, horizontal overflow, a page that vanishes under reduced motion, or a blank first screen. Gemma 4 then scores the first screen of each passing draft from 1 to 10 and the highest score is kept. A score under 6 is marked weak.</p>
+    <p><b>Draft labels.</b> k1–k5 are the first five drafts, k6 and up were requested because the first pick looked weak, and an "r" suffix means Gemma repaired that draft's JavaScript.</p>
+    <p><b>What passing QA doesn't prove.</b> The checks catch errors, overflow and blank screens, not whether every feature works. Several booking forms and calculators on passing pages do nothing when used, and some copy has factual or language mistakes, such as wrong answers in the Spanish level quiz.</p>
+    <p><b>Edits for publishing.</b> Every live site was read in full before it went up. Phone numbers are replaced with zeros because an invented number can still belong to someone, one street address is removed, and one page's white-noise button is turned down. Nothing else was changed.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const sheet = document.getElementById("sheet");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const kind = i => !i.pass ? "fail" : (i.score ?? 0) >= 6 ? "good" : "weak";
+
+function facts() {
+  const n = DATA.items.length, pass = DATA.items.filter(i => i.pass).length;
+  const good = DATA.items.filter(i => kind(i) === "good").length;
+  const s = DATA.stats || {};
+  const rows = [[`${pass}/${n}`, "pass QA"], [`${good}/${n}`, "judged good by Gemma"]];
+  if (s.cost) rows.push([s.cost, "Tinker sampling per site"]);
+  if (s.train) rows.push([s.train, "to fine-tune"]);
+  document.getElementById("facts").innerHTML = rows.map(([b, t]) => `<span><b>${esc(b)}</b> ${esc(t)}</span>`).join("");
+}
+
+function card(i) {
+  const k = kind(i);
+  const chips = [
+    `<span class="chip ${i.pass ? "pass" : "fail"}">${i.pass ? "passes QA" : "fails QA"}</span>`,
+    i.score != null ? `<span class="chip ${k === "good" ? "good" : "weak"}">Gemma ${i.score}/10</span>` : "",
+    `<span class="chip">draft ${esc(i.draft)} of ${i.drafts}</span>`,
+    i.repaired ? `<span class="chip">JS repaired by Gemma</span>` : "",
+    i.edited ? `<span class="chip">edited for publishing</span>` : "",
+  ].join("");
+  const imgs = (i.desktop ? `<img class="d" src="${i.desktop}" alt="First screen of the site for: ${esc(i.request)}" loading="lazy">` : "")
+             + (i.mobile ? `<img class="m" src="${i.mobile}" alt="" loading="lazy">` : "");
+  const shot = i.live
+    ? `<a class="shot picked" href="${i.live}" aria-label="Open the live site">${imgs}</a>`
+    : `<div class="shot">${imgs}</div>`;
+  return `<article class="frame" data-kind="${k}">
+    <div class="top"><span class="num">${esc(i.n)}</span>${chips}</div>
+    <p class="quote">${esc(i.request)}</p>
+    ${shot}
+    ${i.reason ? `<p class="verdict"><b>Gemma:</b> ${esc(i.reason)}</p>` : ""}
+    ${!i.pass && i.errors.length ? `<p class="errors">${i.errors.map(esc).join("<br>")}</p>` : ""}
+    ${i.live ? `<a class="open" href="${i.live}">Open the live site →</a>` : ""}
+    <details><summary>The spec Gemma wrote</summary><p>${esc(i.spec.replace(/\n\nNo photos[\s\S]*$/, ""))}</p></details>
+  </article>`;
+}
+
+function show(f) {
+  const items = DATA.items.filter(i => f === "all" || kind(i) === f);
+  sheet.innerHTML = items.length ? items.map(card).join("") : `<p class="empty">Nothing in this group.</p>`;
+  document.querySelectorAll(".filters button").forEach(b => {
+    b.setAttribute("aria-pressed", String(b.dataset.f === f));
+    const c = b.dataset.f === "all" ? DATA.items.length : DATA.items.filter(i => kind(i) === b.dataset.f).length;
+    b.textContent = b.textContent.replace(/ \(\d+\)$/, "") + ` (${c})`;
+  });
+  try { localStorage.setItem("gallery-filter", f); } catch (e) {}
+}
+
+document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => show(b.dataset.f)));
+facts();
+let start = "all";
+try { start = localStorage.getItem("gallery-filter") || "all"; } catch (e) {}
+show(["all", "good", "weak", "fail"].includes(start) ? start : "all");
+</script>
