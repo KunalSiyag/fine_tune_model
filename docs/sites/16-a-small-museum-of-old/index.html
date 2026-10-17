@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museo Radiofonia Turin — 1935 to Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=EB+Garamond:ital,wght@0,400;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,600;0,700;1,500;1,600&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18V6L2 9l8 3 8-3-8-3z"/></svg>
+      <span>Museo Radiofonia Turin</span>
+    </a>
+    <p class="clock" id="clock">1935–Present</p>
+    <nav class="nav" aria-label="Main">
+      <a href="#collection" aria-current="true">Collection</a>
+      <a href="#hours">Hours</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero-copy">
+        <p class="hero-copy__tag">Museum of Broadcast Engineering</p>
+        <h1 id="h1">Turin, 1935 <br>to now.</h1>
+        <p>In 1935, Turin's first radio station began with a transmitter in the old railway yard, on Via Palermo. This museum shows the machine that made it happen and everything else it grew into.</p>
+      </div>
+      <figure class="hero-media">
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M0 260 C100 240 200 190 300 160 S500 130 600 150 s100 160 80 190 S700 270 600 260z" fill="url(#diag)"/>
+          <path d="M0 380 C100 360 200 310 300 280 S500 250 600 270 s100 310 80 340 S700 400 600 390z" fill="none" stroke="url(#glow)" stroke-width="1.5" stroke-dasharray="6 5"/>
+          <path d="M400 300 l160 30 S700 350 620 390 S400 410 280 390z" fill="none" stroke="var(--brass-deep)" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M300 160 L500 160" stroke="var(--brass-deep)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M400 180 H400" stroke="var(--brass-deep)" stroke-width="1.5"/>
+          <circle cx="400" cy="120" r="30" fill="var(--brass-deep)"/>
+          <path d="M400 120 l0 -10 M400 120 l-10 0 M400 120 l10 0" stroke="var(--sepia)" stroke-width="3"/>
+          <path d="M200 200 L340 200" stroke="var(--brass-deep)" stroke-width="3"/>
+          <circle cx="340" cy="200" r="16" fill="#c2b4a2"/>
+          <g fill="none" stroke="var(--brass-deep)" stroke-width="1.5">
+            <path d="M342 200 l-4 -8 M342 200 l8 -4 M342 200 l8 4 M342 200 l-4 8"/>
+          </g>
+        </svg>
+        <svg class="clock-face" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#c2b4a2" stroke-width="4"/>
+          <g fill="#c2b4a2" stroke="#c2b4a2" stroke-width="2">
+            <path d="M60 14v20M60 106v20M14 60h20M106 60h20M40 60h40M60 40v40M60 80v40"/>
+            <path d="M60 60v26M12 60h96"/>
+          </g>
+        </svg>
+        <svg class="meter" viewBox="0 0 140 50" aria-hidden="true">
+          <rect width="140" height="50" fill="none" stroke="var(--parchment)" stroke-width="1.5"/>
+          <path d="M10 50 V5 C10 5 30 8 50 5" stroke="var(--parchment)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </figure>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="c-title">
+      <div class="sec sec--collection">
+        <div class="sec__head">
+          <h2 class="sec__title" id="c-title">The Collection</h2>
+          <p class="sec__meta">18 models · 1935–1952 · 240 sq metres</p>
+        </div>
+        <ol class="list" id="list" aria-label="Collection">
+          <li class="model" data-model="0" aria-labelledby="c0">
+            <span class="fig">A-1923</span>
+            <h2 id="c0">Antenna Amplifier</h2>
+            <p>Transmitter in the yard, 1935. Signals went out on 1380 kHz on a single 50 kW tube.</p>
+            <ul class="call"><li>1,200 tubes</li><li>50 kW</li><li>1380 kHz</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="1" aria-labelledby="c1">
+            <span class="fig">B-1931</span>
+            <h2 id="c1">Brass Mixer Panel</h2>
+            <p>A 1931 console with ten vacuum tubes, its brass still dark with lacquer and its fluorescent lamp still working.</p>
+            <ul class="call"><li>10 tubes</li><li>Lacquer, 1947</li><li>Fluorescent lamp</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="2" aria-labelledby="c2">
+            <span class="fig">C-1937</span>
+            <h2 id="c2">Cathode-Ray Oscilloscope</h2>
+            <p>Used to monitor transmission: a green trace of the signal, a red trace of the local oscillator.</p>
+            <ul class="call"><li>Two-trace CRT</li><li>Green and red</li><li>1937 model</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="3" aria-labelledby="c3">
+            <span class="fig">D-1940</span>
+            <h2 id="c3">Direct Broadcast Amplifier</h2>
+            <p>Latter-day station amplifiers, built in 1940 to push the signal into the region without the mast.</p>
+            <ul class="call"><li>Regionwide</li><li>20 kW</li><li>1942–1945</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="4" aria-labelledby="c4">
+            <span class="fig">E-1948</span>
+            <h2 id="c4">Echo Simulator</h2>
+            <p>For training announcers. Two seconds of your voice, then the studio echo and the distant echo.</p>
+            <ul class="call"><li>Two delays</li><li>Acoustic chamber</li><li>1948 model</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="5" aria-labelledby="c5">
+            <span class="fig">F-1939</span>
+            <h2 id="c5">Frequency Meter</h2>
+            <p>Dials in 1939 for 88 to 108 MHz, with a needle you could twiddle on the air.</p>
+            <ul class="call"><li>88–108 MHz</li><li>Needle dial</li><li>Ceramic disc</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="6" aria-labelledby="c6">
+            <span class="fig">G-1944</span>
+            <h2 id="c6">Giant Loop Antenna</h2>
+            <p>A loop in the shape of the Italian flag, wound in 1944 and still calibrated to 5 metres.</p>
+            <ul class="call"><li>Italian flag pattern</li><li>5 metres</li><li>1944–1948</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="7" aria-labelledby="c7">
+            <span class="fig">H-1936</span>
+            <h2 id="c7">Helical Antenna</h2>
+            <p>Helical in shape, helical in use: coaxial wave, 1936, still standing on the roof.</p>
+            <ul class="call"><li>Coaxial wave</li><li>Helical shape</li><li>1936</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="8" aria-labelledby="c8">
+            <span class="fig">I-1942</span>
+            <h2 id="c8">Input Coupler</h2>
+            <p>For 40 kW station feeds, 1942, with a 1:1000 tap that could be shifted by hand.</p>
+            <ul class="call"><li>1:1000 tap</li><li>40 kW</li><li>1942</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="9" aria-labelledby="c9">
+            <span class="fig">J-1933</span>
+            <h2 id="c9">Junction Amplifier</h2>
+            <p>Five junctions for one signal, 1933, housed in a mahogany rack that still smells of cedar.</p>
+            <ul class="call"><li>Five junctions</li><li>1933</li><li>Mahogany rack</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="10" aria-labelledby="c10">
+            <span class="fig">K-1941</span>
+            <h2 id="c10">Keying Unit</h2>
+            <p>For the man on the microphone: a pedal, a switch, and a light that blinked when you paused.</p>
+            <ul class="call"><li>Switch and pedal</li><li>Pauses blink</li><li>1941</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="11" aria-labelledby="c11">
+            <span class="fig">L-1934</span>
+            <h2 id="c11">Linear Amplifier</h2>
+            <p>1934 linear amplifier, class AB, used for the longest continuous play of a single record.</p>
+            <ul class="call"><li>Class AB</li><li>1934</li><li>Continuous play</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="12" aria-labelledby="c12">
+            <span class="fig">M-1946</span>
+            <h2 id="c12">Mast Microphone Stand</h2>
+            <p>The 1946 stand that held the studio microphone, two metres, with a shock mount and a level indicator.</p>
+            <ul class="call"><li>2 metres</li><li>Shock mount</li><li>1946</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="13" aria-labelledby="c13">
+            <span class="fig">N-1932</span>
+            <h2 id="c13">Noise Generator</h2>
+            <p>For the test signal, 1932: white noise, pink noise, and the crackle of a bad tape.</p>
+            <ul class="call"><li>Three noise types</li><li>Crackle included</li><li>1932</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="14" aria-labelledby="c14">
+            <span class="fig">O-1945</span>
+            <h2 id="c14">Oscillator Circuit</h2>
+            <p>The heart of every station, 1945: a crystal-controlled oscillator that never wandered.</p>
+            <ul class="call"><li>Crystal-controlled</li><li>No drift</li><li>1945</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="15" aria-labelledby="c15">
+            <span class="fig">P-1938</span>
+            <h2 id="c15">Phase Shifter</h2>
+            <p>For stereo, 1938: a 90-degree phase shift between the left and right channels.</p>
+            <ul class="call"><li>90-degree shift</li><li>Stereo</li><li>1938</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="16" aria-labelledby="c16">
+            <span class="fig">Q-1943</span>
+            <h2 id="c16">Quantizer Circuit</h2>
+            <p>For FM, 1943: a quantizer that turned an analogue signal into a series of pulses.</p>
+            <ul class="call"><li>FM quantizer</li><li>Pulse series</li><li>1943</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="17" aria-labelledby="c17">
+            <span class="fig">R-1947</span>
+            <h2 id="c17">Receiver Unit</h2>
+            <p>The 1947 receiver that listened back, with a crystal headphone and a signal strength meter.</p>
+            <ul class="call"><li>Crystal headphone</li><li>Signal meter</li><li>1947</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="18" aria-labelledby="c18">
+            <span class="fig">S-1944</span>
+            <h2 id="c18">Signal Analyzer</h2>
+            <p>1944 signal analyzer, with a spectrum display and a harmonic analyzer that lit up the eight bands.</p>
+            <ul class="call"><li>Spectrum display</li><li>Harmonics lit</li><li>1944</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="19" aria-labelledby="c19">
+            <span class="fig">T-1935</span>
+            <h2 id="c19">Transmitter Cabinet</h2>
+            <p>The transmitter cabinet, 1935, with the transmitter at the top and the control panel at the bottom.</p>
+            <ul class="call"><li>Transmitter top</li><li>Control panel</li><li>1935</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="20" aria-labelledby="c20">
+            <span class="fig">U-1948</span>
+            <h2 id="c20">Universal Tuner</h2>
+            <p>The 1948 tuner that could pick up anything from AM to shortwave, with a single tuning knob.</p>
+            <ul class="call"><li>AM to shortwave</li><li>One tuning knob</li><li>1948</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="21" aria-labelledby="c21">
+            <span class="fig">V-1937</span>
+            <h2 id="c21">Voltage Regulator</h2>
+            <p>1937 voltage regulator, kept the voltage steady across the whole studio, 110 to 220 volts.</p>
+            <ul class="call"><li>110–220 volts</li><li>1937</li><li>Steady voltage</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="22" aria-labelledby="c22">
+            <span class="fig">W-1942</span>
+            <h2 id="c22">Wave Meter</h2>
+            <p>1942 wave meter, measured the wavelength of a signal and printed it on a dial.</p>
+            <ul class="call"><li>Wavelength dial</li><li>1942</li><li>Printed reading</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="23" aria-labelledby="c23">
+            <span class="fig">X-1936</span>
+            <h2 id="c23">Xenon Lamp</h2>
+            <p>1936 xenon lamp for the studio, 1,500 volts, kept the room lit through the night.</p>
+            <ul class="call"><li>1,500 volts</li><li>1936</li><li>Room lamp</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="24" aria-labelledby="c24">
+            <span class="fig">Y-1941</span>
+            <h2 id="c24">Yaglows Antenna</h2>
+            <p>A Yagi-Uda antenna, 1941, mounted on the roof, with a reflector and a director.</p>
+            <ul class="call"><li>Reflectors and director</li><li>1941</li><li>Roof antenna</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+          <li class="model" data-model="25" aria-labelledby="c25">
+            <span class="fig">Z-1948</span>
+            <h2 id="c25">Zener Diode</h2>
+            <p>1948 Zener diode for voltage regulation, a single component that could do a whole circuit.</p>
+            <ul class="call"><li>Voltage regulator</li><li>1948</li><li>One component</li></ul>
+            <button class="btn" type="button">View Details</button>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="hours" id="hours" aria-labelledby="h-hours">
+      <div class="sec">
+        <div class="sec__head">
+          <h2 class="sec__title" id="h-hours">Hours</h2>
+          <p class="sec__meta">Tuesday to Sunday</p>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Open</h3>
+            <ul>
+              <li><p>Tuesday to Saturday</p><p>10:00 – 17:00</p></li>
+              <li><p>Sunday</p><p>Closed</p></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Admission</h3>
+            <ul>
+              <li><p>General Admission</p><p>€15.00</p></li>
+              <li><p>Members</p><p>€12.50</p></li>
+              <li><p>Children under 12</p><p>Free</p></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Guided Tours</h3>
+            <ul>
+              <li><p>Every Friday at 16:00</p><p>€9.00</p></li>
+              <li><p>Private tour</p><p>Ask at the desk</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tickets" id="tickets" aria-labelledby="h-tickets">
+      <div class="sec">
+        <div class="sec__head">
+          <h2 class="sec__title" id="h-tickets">Tickets</h2>
+          <p class="sec__meta">Choose your visit</p>
+        </div>
+        <div class="tickets__fields">
+          <label class="tickets__radio" data-label="General Admission">
+            <input type="radio" name="entry" data-price="15.00" checked><span>General Admission</span><small>€15.00</small>
+          </label>
+          <label class="tickets__radio" data-label="Member Discount">
+            <input type="radio" name="entry" data-price="12.50"><span>Member Discount</span><small>€12.50</small>
+          </label>
+          <label class="tickets__radio" data-label="Guided Tour">
+            <input type="radio" name="entry" data-price="9.00"><span>Guided Tour</span><small>€9.00</small>
+          </label>
+          <label class="tickets__radio" data-label="Children under 12">
+            <input type="radio" name="entry" data-price="0.00"><span>Children under 12</span><small>Free</small>
+          </label>
+        </div>
+        <div class="tickets__total">
+          <p class="tickets__total-text" id="total">Total €15.00</p>
+          <button class="btn" id="btnBuy" type="button">Buy Ticket</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" id="contact" aria-labelledby="h-contact">
+      <div class="sec sec--contact">
+        <div class="sec__head">
+          <h2 class="sec__title" id="h-contact">Contact</h2>
+          <p class="sec__meta">Office, Via Roma 142, Turin</p>
+        </div>
+        <div class="details__body">
+          <p>Tell us what you'd like to see, or come in and have a look around. We're open Tuesday to Sunday, 10 to 5.</p>
+          <div class="details__contact">
+            <div><span class="details__label">Telephone</span><a href="tel:+000000000">+39 000 000 0000</a></div>
+            <div><span class="details__label">Email</span><a href="mailto:hello@museumradio.example">hello@museumradio.example</a></div>
+            <div><span class="details__label">Address</span>Via Roma 142, Turin 10100</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Museo Radiofonia Turin · Via Roma 142 · 10100 Turin · <a href="tel:+000000000">+39 000 000 0000</a> · <a href="mailto:hello@museumradio.example">hello@museumradio.example</a></p>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="titleLabel">
+    <div class="modal__overlay" aria-hidden="true"></div>
+    <div class="modal__panel" id="panel" aria-label="View details for a radio model">
+      <div class="modal__head">
+        <h2 id="titleLabel"></h2>
+        <a class="close" id="btnClose" href="#collection">Close</a>
+      </div>
+      <div class="modal__body">
+        <p class="play" id="play"></p>
+        <dl class="details" id="details">
+          <div><dt>Model</dt><dd id="dModel"></dd></div>
+          <div><dt>Year</dt><dd id="dYear"></dd></div>
+          <div><dt>Key feature</dt><dd id="dFeature"></dd></div>
+          <div><dt>Fun fact</dt><dd id="dFun"></dd></div>
+        </dl>
+      </div>
+      <div class="modal__foot">
+        <button class="btn" type="button" id="btnPanelRef">Back to the collection</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova Static — November EP</title>
+<meta name="description" content="Nova Static releases its first EP, Static Storm, on November 15. Four tracks, one signal burst, and a tour across four cities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;900&family=IBM+Plex+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="#main"><span aria-hidden="true">NS</span>Nova Static</a>
+  <nav aria-label="Main">
+    <a href="#tours">Tours</a>
+    <a href="#subscribe">Subscribers</a>
+    <a href="#tours" aria-current="page">Tour</a>
+  </nav>
+  <button class="bump" aria-hidden="true"></button>
+</header>
+
+<main id="main" class="grid">
+  <section class="ep" aria-labelledby="ep-title">
+    <div class="art">
+      <div class="ani"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><circle cx="50" cy="50" r="38"/><circle cx="300" cy="50" r="38"/><circle cx="50" cy="300" r="38"/><circle cx="300" cy="300" r="38"/><circle cx="200" cy="200" r="26"/><circle cx="100" cy="100" r="18"/><circle cx="300" cy="100" r="18"/><circle cx="100" cy="300" r="18"/><circle cx="300" cy="300" r="18"/></svg></div>
+      <div class="ani"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><circle cx="50" cy="50" r="38"/><circle cx="300" cy="50" r="38"/><circle cx="50" cy="300" r="38"/><circle cx="300" cy="300" r="38"/><circle cx="200" cy="200" r="26"/><circle cx="100" cy="100" r="18"/><circle cx="300" cy="100" r="18"/><circle cx="100" cy="300" r="18"/><circle cx="300" cy="300" r="18"/></svg></div>
+      <div class="ani"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><circle cx="50" cy="50" r="38"/><circle cx="300" cy="50" r="38"/><circle cx="50" cy="300" r="38"/><circle cx="300" cy="300" r="38"/><circle cx="200" cy="200" r="26"/><circle cx="100" cy="100" r="18"/><circle cx="300" cy="100" r="18"/><circle cx="100" cy="300" r="18"/><circle cx="300" cy="300" r="18"/></svg></div>
+    </div>
+    <div class="ep-links">
+      <h2 id="ep-title">Static Storm</h2>
+      <div class="tlist" id="tlist" role="list" aria-label="Static Storm, four tracks">
+        <button type="button" aria-expanded="false"><span aria-hidden="true">01</span><span>Fallout</span><span>02:31</span><p>This one was written in the attic, where the radio only got one station.</p></button>
+        <button type="button" aria-expanded="false"><span aria-hidden="true">02</span><span>Electric Waste</span><span>04:19</span><p>Cigarette wrappers in a landfill, burning your name into every page.</p></button>
+        <button type="button" aria-expanded="false"><span aria-hidden="true">03</span><span>Neon Sun</span><span>03:08</span><p>It rises in my bedroom, never in the sky.</p></button>
+        <button type="button" aria-expanded="false"><span aria-hidden="true">04</span><span>Static Beach</span><span>02:57</span><p>Fourteen minutes of waves and a single, looping birdcall.</p></button>
+        <button type="button" aria-expanded="false"><span aria-hidden="true">05</span><span>Sand in the Speakers</span><span>03:46</span><p>We fought in sound. Now it’s all I can hear.</p></button>
+      </div>
+      <button class="listen" type="button" id="listen" aria-pressed="false">Listen Now <i aria-hidden="true">→</i></button>
+    </div>
+  </section>
+
+  <section class="tour" aria-labelledby="tour-title">
+    <div class="ann">
+      <div class="eyebrow">— November 2026</div>
+      <h2 id="tour-title">November EP Drop</h2>
+      <time id="countdown" aria-hidden="true">03:02</time>
+      <span id="announce" hidden>November EP Drop · 3:02 PM EST</span>
+      <button type="button" class="action" id="announce-btn">Countdown</button>
+    </div>
+    <ol class="tour-list">
+      <li><time>Nov 15, 2026 · 8:00 PM</time><h4>Brooklyn</h4><p>Barrel House, 1111 Flushing Ave</p><button type="button">Tickets →</button></li>
+      <li><time>Nov 17, 2026 · 7:30 PM</time><h4>Buffalo</h4><p>Elm Street Workshop, 123 Elm St</p><button type="button">Tickets →</button></li>
+      <li><time>Nov 20, 2026 · 9:00 PM</time><h4>Albany</h4><p>Ironworks, 456 South Warren St</p><button type="button">Tickets →</button></li>
+      <li><time>Nov 24, 2026 · 6:45 PM</time><h4>Chicago</h4><p>The Loop Room, 789 Wabash Ave</p><button type="button">Tickets →</button></li>
+    </ol>
+    <form class="subscribe" id="subscribe" novalidate>
+      <label for="range">Your Broadcast Frequency</label>
+      <div class="range">
+        <output id="label" for="range">Every release</output>
+        <input id="range" type="range" min="1" max="6" step="1" value="6">
+      </div>
+      <button type="submit">Add to the List</button>
+      <output id="status" for="range" aria-live="polite"></output>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">Nova Static · Static Storm EP · 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>

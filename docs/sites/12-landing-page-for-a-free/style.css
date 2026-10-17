@@ -1,0 +1,116 @@
+:root {
+  --ground: #e8e8e8;
+  --slate: #dcdcdc;
+  --slate-deep: #3d405b;
+  --slate-deep-2: #2a2b3f;
+  --soft: #ffffff;
+  --blue: #3b82f6;
+  --blue-deep: #2b65c1;
+  --line: color-mix(in oklch, var(--slate-deep) 18%, var(--ground));
+  --ease: cubic-bezier(.23, 1, .32, 1);
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--slate-deep);
+  font: 400 1rem/1.55 "Inter", sans-serif;
+}
+
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 50;
+  padding: 8px 12px; background: var(--blue-deep); color: var(--soft);
+}
+.skip:focus { top: 12px; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.top { position: relative; overflow: hidden; }
+.top__grid { position: absolute; inset: 0; z-index: 1; }
+.top__grid svg { display: block; width: 100%; height: 100%; }
+.top__grid .line { fill: none; stroke: var(--line); stroke-width: 1.5; opacity: .55; }
+.top__grid .line--thick { stroke-width: 4; }
+.top__grid .line--blue { stroke: var(--blue); stroke-opacity: .3; }
+
+.top__wrap { max-width: 1300px; margin: 0 auto; padding: clamp(28px, 5vw, 64px) 28px 0; }
+.top__title { font: 500 clamp(3.4rem, 1.4rem + 5.6vw, 6.6rem)/.95 "Poppins", sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+.top__sub { margin: 20px 0 0; max-width: 48ch; font-size: .95rem; color: var(--soft); font-weight: 400; }
+.top__cta { margin-top: 28px; display: inline-block; padding: 14px 24px; background: var(--blue); color: var(--soft); text-decoration: none; font-weight: 600; font-size: .95rem; }
+.top__cta:hover { background: var(--soft); color: var(--blue-deep); }
+
+/* Faders: cards, buttons, labels, and readouts lift in sync with the parallax */
+.fader { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.fader.in { opacity: 1; transform: none; }
+
+/* CTA + intro column */
+.cola {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px 72px;
+  align-items: start;
+  max-width: 1300px; margin: clamp(40px, 7vw, 96px) auto 0;
+}
+.cola__title { font: 500 clamp(2.6rem, 1.4rem + 3.4vw, 4rem)/1 "Poppins", sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+.cola__title em { font: 500 1.15rem/1 "Poppins", sans-serif; color: var(--blue); }
+
+.intro { margin: 0; max-width: 56ch; font-size: 1.0625rem; line-height: 1.6; }
+
+/* Features */
+.feature { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 14px 32px; align-items: center; padding: 24px 28px; background: var(--slate); border: 1px solid var(--line); border-radius: 10px; transition: background-color .3s; }
+.feature--blue { background: var(--blue-deep); color: var(--soft); }
+.feature svg { width: 80px; height: 80px; fill: var(--slate-deep); }
+.feature:hover { background: color-mix(in oklch, var(--slate-deep) 90%, var(--slate)); }
+.feature h3 { font: 500 1.35rem/1.1 "Poppins", sans-serif; letter-spacing: -.02em; }
+.feature p { color: var(--slate); font-size: 1.0625rem; }
+
+/* Calculator */
+.calc { max-width: 520px; margin: clamp(32px, 5vw, 64px) auto 0; }
+.calc__border { border: 2px solid var(--blue); background: var(--soft); border-radius: 12px; padding: 20px 24px; margin-bottom: 28px; }
+.calc__title { font: 500 1.75rem/1.1 "Poppins", sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+.calc__row { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+.calc__row > label { font-size: .8125rem; color: var(--slate); }
+.calc__input { width: 100%; height: 46px; padding: 0 14px; font-size: 1.0625rem; background: none; border: 0; border-bottom: 1.5px solid var(--line); color: var(--slate-deep); }
+.calc__input:focus { outline: none; border-bottom-color: var(--blue); }
+.calc__output { font: 500 1.5rem/1.2 "Poppins", sans-serif; text-align: right; }
+.calc__output b { color: var(--blue); font-weight: 600; }
+.calc__output small { font-size: .8125rem; color: var(--slate); margin-left: 6px; }
+
+.accordion { border-top: 2px solid var(--blue); position: relative; }
+.accordion__summary { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; cursor: pointer; border-bottom: 1px solid var(--line); }
+.accordion__summary i { font: 500 1.15rem/1 "Poppins", sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+.accordion__summary i::after { content: "↓"; font-weight: 600; color: var(--blue); }
+.accordion__summary--open i::after { content: "↑"; }
+.accordion__content { padding: 0 16px 20px; }
+.accordion__point { font-size: 1.0625rem; line-height: 1.55; }
+.accordion__point strong { color: var(--blue); }
+
+/* Benefits */
+.ben { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; border-top: 2px solid var(--blue); }
+.ben__item { padding: 18px 20px; background: var(--slate-deep); transition: background-color .3s; }
+.ben__item:hover { background: var(--slate); }
+.ben__item b { display: block; font: 500 1.35rem/1.1 "Poppins", sans-serif; }
+.ben__item span { display: block; margin-top: 8px; color: var(--slate); font-size: .9375rem; }
+
+/* Footer */
+.foot { max-width: 1300px; margin: 0 auto; padding: 40px 28px 28px; border-top: 1px solid var(--line); font-size: .875rem; color: var(--slate); }
+
+@media (max-width: 860px) {
+  .cola { grid-template-columns: 1fr; }
+  .feature { grid-template-columns: 56px minmax(0, 1fr); gap: 8px 20px; }
+  .feature svg { width: 56px; height: 56px; }
+  .feature--blue { background: var(--blue); color: var(--slate-deep); }
+  .calc__row { grid-template-columns: 1fr; gap: 8px; }
+  .calc__output { text-align: left; }
+}
+
+@media (max-width: 560px) {
+  .top__title { font-size: 2.6rem; }
+  .feature { padding: 18px 14px; }
+  .ben { grid-template-columns: 1fr; }
+  .ben__item { padding: 16px 12px; }
+}

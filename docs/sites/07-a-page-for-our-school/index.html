@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fund the Trip — Robot Ascent 2027</title>
+  <meta name="description" content="Fund the Northwood High Robotics Team's trip to the State Fair Expo in Indianapolis for the 2027 competition season.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#pledge">Skip to the pledge form</a>
+
+  <header class="top">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 14h22zM12 20l-11-8 11-8M12 20v-4M4 14h16"/></svg>
+      <span>Robot Ascent</span>
+    </a>
+    <nav aria-label="Page">
+      <a href="#mission">Mission</a>
+      <a href="#tiers" data-marked>Support</a>
+      <a href="#faq">Ask</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <figure class="robot">
+        <svg viewBox="0 0 400 300" role="img" aria-labelledby="heroTitle">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00bcd4"/><stop offset="1" stop-color="#0079d4"/></linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffeb3b"/><stop offset="1" stop-color="#ffeb3b"/></linearGradient>
+          </defs>
+          <g transform="translate(100, 150)">
+            <g class="chassis">
+              <rect x="-156" y="-110" width="312" height="220" rx="16" fill="#1a237e"/>
+              <rect x="-150" y="-104" width="300" height="208" rx="14" fill="url(#g2)"/>
+              <rect x="-144" y="-98" width="288" height="196" rx="12" fill="none" stroke="#1a237e" stroke-width="6"/>
+              <g class="wheels">
+                <rect x="-220" y="-70" width="20" height="56" rx="10" fill="url(#g1)"/>
+                <rect x="-190" y="-70" width="20" height="56" rx="10" fill="url(#g2)"/>
+                <rect x="-160" y="-70" width="20" height="56" rx="10" fill="url(#g1)"/>
+                <rect x="-130" y="-70" width="20" height="56" rx="10" fill="url(#g2)"/>
+              </g>
+              <g class="arm">
+                <path d="M-30 -46 L-22 -30 L-10 -16 L2 0 L18 12 L32 4 L40 12 L52 0 L60 -16 L70 -30 L76 -46" fill="#1a237e"/>
+                <path d="M-30 -46 L-22 -30 L-10 -16 L2 0 L18 12 L32 4 L40 12 L52 0 L60 -16 L70 -30 L76 -46" fill="none" stroke="#1a237e" stroke-width="2"/>
+                <g class="fingers">
+                  <rect x="-28" y="-54" width="16" height="22" rx="3" fill="url(#g1)"/>
+                  <rect x="-14" y="-54" width="16" height="22" rx="3" fill="#1a237e"/>
+                  <rect x="0" y="-54" width="16" height="22" rx="3" fill="url(#g2)"/>
+                  <rect x="16" y="-54" width="16" height="22" rx="3" fill="#1a237e"/>
+                  <rect x="32" y="-54" width="16" height="22" rx="3" fill="url(#g1)"/>
+                </g>
+              </g>
+            </g>
+            <g class="turret">
+              <rect x="-130" y="90" width="260" height="100" rx="12" fill="#1a237e"/>
+              <rect x="-124" y="84" width="248" height="92" rx="10" fill="url(#g2)"/>
+            </g>
+          </g>
+        </svg>
+      </figure>
+      <div class="fund" aria-labelledby="heroTitle">
+        <div class="fund__figure" data-reveal>
+          <span data-reveal>$2,000</span>
+          <b data-reveal>Needed</b>
+        </div>
+        <div class="progress" aria-hidden="true">
+          <div class="progress__step" data-s="0"></div>
+          <div class="progress__step" data-s="10"></div>
+          <div class="progress__step" data-s="20"></div>
+          <div class="progress__step" data-s="30"></div>
+          <div class="progress__step" data-s="40"></div>
+          <div class="progress__step" data-s="50"></div>
+          <div class="progress__step" data-s="60"></div>
+          <div class="progress__step" data-s="70"></div>
+          <div class="progress__step" data-s="80"></div>
+          <div class="progress__step" data-s="90"></div>
+          <div class="progress__step" data-s="100"></div>
+        </div>
+        <p class="fund__raise" data-reveal>Of the $2,000 needed to cover travel and parts, <b id="progressBar" style="--p:0"></b> has been raised so far.</p>
+      </div>
+    </section>
+
+    <section class="sec-head" id="mission" aria-labelledby="missionTitle">
+      <div class="sec-head__title" id="missionTitle">Mission Brief</div>
+      <div class="sec-head__meta">
+        <span><span class="screen-reader">Destination</span> State Fair Expo, Indianapolis</span>
+        <span><span class="screen-reader">Date range</span> October 15–18, 2027</span>
+        <span><span class="screen-reader">Competitors</span> 48 teams, 12 robots each</span>
+      </div>
+    </section>
+
+    <section class="funding" aria-labelledby="tiersTitle">
+      <div class="funding__head">
+        <div>
+          <h2 id="tiersTitle">Support the Ascent</h2>
+          <p>Fund the trip in stages and earn a reward from the squad. Every tier supports travel, parts and registration.</p>
+        </div>
+        <form class="pledge" id="pledgeForm" novalidate>
+          <fieldset class="pledge__bar">
+            <label for="amount">Pledge</label>
+            <input id="amount" type="number" inputmode="decimal" step="0.01" min="0" placeholder="0.00" aria-describedby="pledgeNote">
+            <button type="submit" class="pledge__btn" disabled>Pledge $0.00</button>
+          </fieldset>
+          <p class="pledge__note" id="pledgeNote">Pledges are for the trip and are due in full by September 30, 2027. No credit card is taken before then.</p>
+          <div class="pledge__total">Total: <b>$0.00</b></div>
+          <div class="pledge__left">Left for the trip: <b>$2,000.00</b></div>
+        </form>
+      </div>
+      <ol class="tiers" id="tiers">
+        <li class="tier">
+          <div class="tier__title"><span>$25</span><h3>Team Sticker</h3></div>
+          <p class="tier__meta">1 per pledge</p>
+          <div class="tier__content">
+            <p>Get a numbered sticker with your pledge amount on it. Display it on your dashboard at the expo.</p>
+          </div>
+          <button type="button" class="tier__btn" data-tier="25">Pledge $25</button>
+        </li>
+        <li class="tier">
+          <div class="tier__title"><span>$50</span><h3>Autograph</h3></div>
+          <p class="tier__meta">1 per pledge</p>
+          <div class="tier__content">
+            <p>Autograph signed by the team captain on the back of a robot design sketch. Includes a copy of the robot's name.</p>
+          </div>
+          <button type="button" class="tier__btn" data-tier="50">Pledge $50</button>
+        </li>
+        <li class="tier">
+          <div class="tier__title"><span>$100</span><h3>Team Dinner</h3></div>
+          <p class="tier__meta">1 per pledge</p>
+          <div class="tier__content">
+            <p>Join us for dinner at the expo and watch the first match. Your name on the team's meal order.</p>
+          </div>
+          <button type="button" class="tier__btn" data-tier="100">Pledge $100</button>
+        </li>
+        <li class="tier">
+          <div class="tier__title"><span>$250</span><h3>Team Sponsor</h3></div>
+          <p class="tier__meta">1 per pledge</p>
+          <div class="tier__content">
+            <p>Your name on the robot's chassis and at the expo's sponsor wall for the season. You're family, so we put you first.</p>
+          </div>
+          <button type="button" class="tier__btn" data-tier="250">Pledge $250</button>
+        </li>
+        <li class="tier">
+          <div class="tier__title"><span>$500</span><h3>Lock-In</h3></div>
+          <p class="tier__meta">1 per pledge</p>
+          <div class="tier__content">
+            <p>Locked in early for the season. You'll be in every email, every practice, and on the team's email list for the whole year.</p>
+          </div>
+          <button type="button" class="tier__btn" data-tier="500" data-locked>Pledge $500</button>
+        </li>
+      </ol>
+    </section>
+
+    <section class="sec-head" id="faq" aria-labelledby="faqTitle">
+      <div class="faq" id="faq" data-reveal>
+        <h2 id="faqTitle" class="sr-only">Questions</h2>
+        <li><button type="button" aria-expanded="false"><span>Do you take credit cards now?</span></button><p>We don't take a card until September 30. Pledges are held in a password-locked spreadsheet until then, and you can cancel at any time.</p></li>
+        <li><button type="button" aria-expanded="false"><span>Who gets the money?</span></button><p>Every dollar goes directly to travel, parts and registration. There is no school fundraising fee, no agency cut, nothing.</p></li>
+        <li><button type="button" aria-expanded="false"><span>Can I split a pledge?</span></button><p>Yes. Just tell us how many people are pledging together and we'll put the names on every thank-you.</p></li>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="foot">
+    <div class="foot__left">
+      <p class="foot__big"><b>Northwood High Robotics Team 2027</b></p>
+      <p><b>Coach's Address</b><br>Ms. P. Voda<br>[street address removed]<br>Indianapolis, IN</p>
+      <p class="foot__note">Funded via Parent/Student Donations Only</p>
+    </div>
+    <div class="foot__right">
+      <p class="foot__big"><b>Overall</b><br><span data-reveal>$2,000</span></p>
+      <p><b>Trip Budget Breakdown</b><br><span data-reveal>Travel &amp; Lodging: $800<br>Parts &amp; Supplies: $750<br>Registration: $450</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

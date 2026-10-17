@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flat split calculator · Split</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#top">Skip to content</a>
+
+  <header class="top" id="top">
+    <div class="top__grid" aria-hidden="true">
+      <svg viewBox="0 0 1400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="line" d="M-20 400 L1400 400" opacity="1" pathLength="1"/>
+        <path class="line--thin" d="M-20 380 L1400 380" opacity=".5"/>
+        <path class="line--thick" d="M-20 350 L1400 350" opacity="1.1"/>
+        <path class="line--blue" d="M-20 330 L1400 330" opacity=".4"/>
+        <path class="line" d="M-20 300 L1400 300" opacity=".8"/>
+        <path class="line--thin" d="M-20 280 L1400 280" opacity=".5"/>
+        <path class="line--thick" d="M-20 250 L1400 250" opacity="1.4"/>
+        <path class="line--blue" d="M-20 230 L1400 230" opacity=".2"/>
+        <path class="line" d="M-20 200 L1400 200" opacity=".9"/>
+        <path class="line--thin" d="M-20 180 L1400 180" opacity=".5"/>
+        <path class="line--thick" d="M-20 150 L1400 150" opacity="1.3"/>
+        <path class="line--blue" d="M-20 130 L1400 130" opacity=".1"/>
+        <path class="line" d="M-20 100 L1400 100" opacity=".7"/>
+        <path class="line--thin" d="M-20 80 L1400 80" opacity=".5"/>
+        <path class="line--thick" d="M-20 50 L1400 50" opacity="1.5"/>
+        <path class="line--blue" d="M-20 30 L1400 30" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="top__wrap">
+      <h1 class="top__title">Split the Load. Simplify the Flat.</h1>
+      <p class="top__sub">A split calculator that does the hard sums for you. Get the number to text, send it, and settle in one go.</p>
+      <a class="top__cta" href="#calc">Open the calculator →</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="cola" id="top" aria-labelledby="col-title">
+      <div class="col-left">
+        <h2 class="col-title" id="col-title">Settle now. Send later.</h2>
+        <p class="intro fader">Split keeps track of every shared expense in one place: rent, utilities, takeaway orders, and the dog sitter. Add a note if it’s a one-off, and we’ll keep it from your average. Settle a bill once, and every split goes out in the same message.</p>
+      </div>
+      <div class="col-right">
+        <div class="feature feature--blue fader" aria-labelledby="feature-1">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44"/><path d="M18 50 L32 64 L32 36"/></svg>
+          <div><h3 id="feature-1">Quick &amp; fair splits</h3><p>Calculate each share in seconds. One number per person, no arguments.</p></div>
+        </div>
+        <div class="feature fader" aria-labelledby="feature-2">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="22" y="30" width="56" height="40" rx="4"/><path d="M48 66 L34 52 L52 40 L27 34 L41 26"/></svg>
+          <div><h3 id="feature-2">Shared, then settled</h3><p>Every note is a shared expense. We average them over the month, so one Tuesday takeaway doesn’t drag January into the new year.</p></div>
+        </div>
+        <div class="feature fader" aria-labelledby="feature-3">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 30 L60 80 M60 30 L20 80"/></svg>
+          <div><h3 id="feature-3">Send the split</h3><p>Copy the text to send, or we can send it for you. It goes to every shared person, and everyone confirms it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calc" id="calc" aria-labelledby="calc-title">
+      <h2 class="calc__title" id="calc-title">Split calculator</h2>
+      <div class="calc__border">
+        <div class="calc__row">
+          <label for="shared">Shared cost</label>
+          <input type="number" id="shared" inputmode="numeric" data-shared min="10" max="500" step="1" value="150">
+        </div>
+        <div class="calc__row">
+          <label for="ind">Individual cost</label>
+          <input type="number" id="ind" inputmode="numeric" min="10" max="500" step="1" value="120">
+        </div>
+        <p class="calc__output" aria-live="polite">0.0% split, £0.00 from you</p>
+      </div>
+
+      <div class="accordion" id="acc" aria-label="How Split works">
+        <button class="accordion__summary" type="button" aria-expanded="true" aria-controls="acc0">How it works <i>↑</i></button>
+        <div class="accordion__content" id="acc0">
+          <p class="accordion__point"><strong>01.</strong> Add every shared expense to your list: rent, utilities, takeaway orders, and the dog sitter.</p>
+          <p class="accordion__point"><strong>02.</strong> Split shows you each person’s share and the exact amount you owe them or need to pay.</p>
+          <p class="accordion__point"><strong>03.</strong> Text the split to the group, or let us send it for you. Every person confirms it once.</p>
+          <p class="accordion__point"><strong>04.</strong> Settle with one tap. The money goes back to the group, or we split it between you and your roommates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ben" aria-labelledby="ben-title">
+      <p class="sr" id="ben-title">Why Split, in three words</p>
+      <div class="ben__item"><b>No More Text Chains</b><span>One message settles the whole month.</span></div>
+      <div class="ben__item"><b>Perfect Fairness</b><span>Lots of people, one split. Every share counts.</span></div>
+      <div class="ben__item"><b>Instant Settlement</b><span>£40 back to your card, not into someone’s hands.</span></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Split · 448 Oxford St, London W1D 6JN · <a href="mailto:hello@split.example">hello@split.example</a><br>© 2026 Split Ltd. All right reserved.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

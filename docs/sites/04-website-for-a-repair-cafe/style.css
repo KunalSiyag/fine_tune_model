@@ -1,0 +1,134 @@
+/* De Reparatie Koffie Utrecht — charcoal, copper, parchment */
+:root {
+  --night: #262320;
+  --night-2: #1f1c18;
+  --parch: #e8e4dd;
+  --copper: #b87333;
+  --rust: #8a4836;
+  --bone: #f2e8e0;
+  --bone-alt: #bfb8b2;
+  --slate: #4a4440;
+  --serif: "Noto Serif", Georgia, serif;
+  --sans: "Source Code Pro", monospace;
+  --display: "Merriweather", Georgia, serif;
+  --gut: clamp(16px, 4vw, 56px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--bone);
+  font: 400 1rem/1.5 var(--serif);
+}
+h1, h2, p, ul, ol, dl, figure, blockquote, fieldset, address { margin: 0; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--parch); padding: 8px 12px; }
+.skip:focus { top: 12px; }
+
+/* ---------- header ---------- */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 16px var(--gut);
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--bone-alt);
+  position: relative;
+  z-index: 10;
+}
+.top svg { width: 40px; fill: var(--copper); }
+.top h1 { font: 400 clamp(2.2rem, 2rem + 1.4vw, 2.8rem)/1.05 var(--display); }
+.top nav { display: flex; gap: 14px; font-size: .9375rem; margin-left: auto; }
+.top nav a { text-decoration: none; color: inherit; padding: 8px 0; border-bottom: 2px solid transparent; }
+.top nav a:hover { border-color: var(--copper); }
+
+/* ---------- intro ---------- */
+.intro { padding: clamp(56px, 10vw, 120px) var(--gut) clamp(56px, 8vw, 96px); background: var(--night-2); }
+.intro .art { width: 100%; max-width: 400px; margin: 0 0 24px; fill: var(--copper); }
+.intro .art--small { width: 100%; max-width: 140px; margin: 0 auto; }
+.intro .art--tiny { width: 48px; margin: 0 auto; }
+.intro > p:not(.intro__lead):not(.intro__body), .faq .faq__body, .faq__legend, .faq__hint { color: var(--bone-alt); max-width: 54ch; }
+.intro__lead { max-width: 58ch; font-size: clamp(1.1rem, 1rem + .4vw, 1.35rem); font-weight: 500; line-height: 1.4; margin: 0 0 32px; }
+.intro__body { max-width: 40ch; }
+.intro__cta { display: inline-block; margin-top: 32px; padding: 12px 24px; background: var(--copper); color: var(--night); font-weight: 600; font-size: .9375rem; text-decoration: none; }
+.intro__cta:hover { background: var(--bone); color: var(--copper); }
+
+/* ---------- grid ---------- */
+.grid { padding: clamp(56px, 8vw, 104px) var(--gut); border-top: 1px solid var(--slate); }
+.grid h2 { font: 400 clamp(2.6rem, 3rem, 3.6rem)/.92 var(--display); max-width: 12ch; margin-bottom: 24px; }
+.grid .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.tile { border: 1px solid var(--slate); padding: 20px 24px 24px; }
+.tile.is-solid { background: var(--parch); }
+.tile.is-solid .tile__icon { fill: var(--copper); }
+.tile h3 { font: 400 1.375rem/1.05 var(--display); margin: 4px 0 8px; }
+.tile__icon { width: 40px; fill: var(--copper); }
+.tile__body { color: var(--bone-alt); }
+.tile__body b { display: block; font: 400 1.5rem/1 var(--serif); color: var(--bone); }
+.tile.is-solid .tile__body b { color: var(--copper); }
+.tile.is-solid h3 { color: var(--copper); }
+
+/* ---------- accordion ---------- */
+.faq { padding: clamp(56px, 8vw, 104px) var(--gut); }
+.faq__legend { font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 24px; }
+.faq__list { border-top: 1px solid var(--slate); }
+.faq__acc { border-bottom: 1px solid var(--slate); }
+.faq__acc:last-child { border-bottom: 0; }
+.faq__h { display: grid; grid-template-columns: 28px 1fr auto; gap: 14px; align-items: center; padding: 16px; cursor: pointer; }
+.faq__h::after { content: "+"; font: 400 1.5rem/1 var(--serif); color: var(--copper); }
+.faq__acc[open] .faq__h::after { content: "−"; }
+.faq__h svg { width: 28px; fill: var(--copper); }
+.faq__h b { font: 400 clamp(1.25rem, 1.05rem + .8vw, 1.6rem)/1.05 var(--display); }
+.faq__h small { font-size: .8125rem; font-weight: 500; color: var(--bone-alt); }
+.faq__body { overflow: hidden; padding: 0 24px 20px; }
+.faq__body p { font-size: .9375rem; color: var(--bone-alt); }
+.faq__body cite { display: block; margin-top: 8px; font-style: italic; }
+.faq__body code { display: inline-block; padding: 0 6px; background: var(--night-2); color: var(--parch); font-size: .8125rem; font-weight: 700; }
+.faq__body .faq__hint { font-size: .8125rem; color: var(--rust); margin-top: 6px; }
+
+/* ---------- footer ---------- */
+.foot { padding: clamp(56px, 8vw, 104px) var(--gut); border-top: 1px solid var(--slate); }
+.foot__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.foot__cols p:last-child { margin-top: 10px; }
+.foot__cols address { font-style: normal; }
+.foot__cols p:last-child, .foot__cta { font-size: .8125rem; font-weight: 500; }
+.foot__cta { padding: 14px 20px; background: var(--copper); color: var(--night); font-weight: 600; font-size: .9375rem; }
+
+/* ---------- hero ---------- */
+.hero { position: relative; padding: clamp(80px, 12vw, 160px) var(--gut); display: grid; gap: clamp(24px, 4vw, 48px); align-content: start; }
+.hero__art { position: absolute; left: var(--gut); bottom: 0; width: 240px; fill: var(--copper); }
+.hero__lead { max-width: 44ch; font-size: clamp(1.25rem, 1rem + .8vw, 1.6rem); line-height: 1.45; color: var(--bone-alt); }
+.hero__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; align-items: end; }
+.hero__row .right { grid-column: 1 / -1; }
+.hero__row .left { grid-column: 1 / -1; }
+.hero__row p { font-size: .9375rem; color: var(--bone-alt); }
+.hero__row .right h2 { font: 400 clamp(3.2rem, 3rem + 3vw, 4.6rem)/.88 var(--display); margin: 0; }
+.right .hero__row p { margin-top: 16px; }
+.left .hero__row p { margin-top: 16px; }
+.hero__row .right .btn { margin-top: 24px; }
+
+@media (max-width: 720px) {
+  .top { flex-direction: column; align-items: start; }
+  .top nav { margin-left: 0; }
+  .grid .tiles { grid-template-columns: 1fr; }
+  .grid .tiles .tile.is-solid { border-top: 1px solid var(--slate); }
+  .faq__h { grid-template-columns: 20px 1fr auto; }
+  .hero__row { grid-template-columns: 1fr; }
+  .hero__row .left { grid-column: 1; }
+  .hero__row .right { grid-column: 1; }
+}
+@media (max-width: 480px) {
+  .top svg { width: 34px; }
+  .grid .tiles .tile__icon { width: 34px; }
+  .faq__h { grid-template-columns: 1fr auto; }
+  .faq__h svg { grid-column: 1; }
+  .faq__h small { display: none; }
+  .foot__cols { grid-template-columns: 1fr; }
+  .foot__cta { grid-column: 1; }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant Finder — Fern &amp; Moss Co.</title>
+  <meta name="description" content="Plant Finder for Fern &amp; Moss Co. Search low-light, succulent or flowering plants by care level: Water, Light and Soil. Toronto delivery included with every order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="mark" href="#">Fern&nbsp;&amp;&nbsp;Moss Co.</a>
+    <nav class="nav" aria-label="Fern &amp; Moss Co.">
+      <a href="#finder">Plant Finder</a>
+      <a href="#care">Care Guide</a>
+      <a class="tag" href="#toronto">Toronto Delivery</a>
+    </nav>
+  </header>
+
+  <main class="bench">
+    <section class="left hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="text--lead">Good plants for your light.</h1>
+      <h2 class="text--lead">Search by care level, not by luck.</h2>
+      <svg class="node" viewBox="0 0 300 280" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
+        <circle cx="150" cy="100" r="80" class="node--leaf" fill="none" stroke="#0a342c" stroke-width="32" stroke-linecap="round"/>
+        <circle cx="150" cy="100" r="65" fill="#f8f5ec"/>
+        <text x="150" y="142" text-anchor="middle" font-size="20" font-weight="500" fill="#1a1a1a">Fern &amp; Moss Co.</text>
+        <path d="M150 180 L110 230 L100 280 L140 280 L130 230 Z" fill="#0a342c" opacity=".18"/>
+        <path d="M150 180 L190 230 L200 280 L160 280 L170 230 Z" fill="#0a342c" opacity=".18"/>
+        <path d="M130 230 L135 280 L160 280 L155 230 Z" fill="#0a342c" opacity=".18"/>
+        <path d="M170 230 L175 280 L150 280 L145 230 Z" fill="#0a342c" opacity=".18"/>
+      </svg>
+    </section>
+
+    <section class="right finder" id="finder" aria-labelledby="finder-title">
+      <h2 id="finder-title" class="text">Plant Finder <small>52 plants · 3 care levels · Toronto delivery</small></h2>
+
+      <nav class="items" id="finder-nav" aria-label="Care levels">
+        <div class="items-item">
+          <button type="button" data-filter="care" data-value="all" aria-expanded="true">All plants</button>
+          <details class="details" data-value="low">
+            <summary>Low Light, Low Water</summary>
+            <p>Plants that thrive in rooms with little or no direct sunlight, and only need to be watered when nearly dry.</p>
+            <dl>
+              <dt>Water</dt><dd>Let the soil dry out completely</dd>
+              <dt>Light</dt><dd>Indirect, bright room light</dd>
+              <dt>Soil</dt><dd>Succulent mix</dd>
+            </dl>
+          </details>
+          <details class="details" data-value="medium">
+            <summary>Medium Light, Regular Water</summary>
+            <p>Plants that prefer a few hours of sun a day and a more regular watering schedule.</p>
+            <dl>
+              <dt>Water</dt><dd>Every 1–2 weeks</dd>
+              <dt>Light</dt><dd>Medium to bright indirect</dd>
+              <dt>Soil</dt><dd>Bark and peat mix</dd>
+            </dl>
+          </details>
+          <details class="details" data-value="high">
+            <summary>High Light, High Water</summary>
+            <p>Plants that need a lot of light and humidity, often grouped together in a greenhouse.</p>
+            <dl>
+              <dt>Water</dt><dd>Every 7–10 days</dd>
+              <dt>Light</dt><dd>Direct morning sun</dd>
+              <dt>Soil</dt><dd>Peat and moss mix</dd>
+            </dl>
+          </details>
+        </div>
+      </nav>
+
+      <div class="items" id="finder-list" aria-label="Search results">
+        <div class="items-item">
+          <button type="button" data-filter="plant" data-value="ferns" aria-expanded="false">Ferns</button>
+          <details class="details" data-value="ferns">
+            <summary>Five ferns for every room</summary>
+            <p>Every one of these ferns keeps root heat through the winter, so they're shipped bare-root and only need a pot to root into.</p>
+            <dl>
+              <dt>Water</dt><dd>Spritz daily in winter</dd>
+              <dt>Light</dt><dd>Indirect light</dd>
+              <dt>Soil</dt><dd>Peat and moss mix</dd>
+            </dl>
+          </details>
+          <div class="tiles">
+            <article class="tile" data-care="low">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34" fill="#0a342c"/><circle cx="40" cy="40" r="14" fill="#f8f5ec"/></svg>
+              <h3>Adiantum</h3>
+              <p>Sword fern, about 20 cm tall. Best in a pot on a north-facing windowsill.</p>
+              <div class="bar" data-care="low"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 70% low light, low water"><circle cx="200" cy="7" r="7" data-w="70"/></svg></div>
+            </article>
+            <article class="tile" data-care="low">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 10 C32 15 20 28 22 40 C24 52 36 65 44 70" fill="#0a342c"/><path d="M40 10 C32 15 20 28 22 40 C24 52 36 65 44 70" fill="#f8f5ec" opacity=".6"/></svg>
+              <h3>Asplenium</h3>
+              <p>Evergreen in winter, about 15 cm tall. Holds heat in the pot and stays green through December.</p>
+              <div class="bar" data-care="low"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 70% low light, low water"><circle cx="200" cy="7" r="7" data-w="70"/></svg></div>
+            </article>
+            <article class="tile" data-care="medium">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M30 60 C22 30 50 15 60 40 C70 65 50 85 30 75" fill="#0a342c"/><path d="M30 60 C22 30 50 15 60 40 C70 65 50 85 30 75" fill="#f8f5ec" opacity=".55"/></svg>
+              <h3>Nephrolepis</h3>
+              <p>Spider fern, about 30 cm tall. Tolerates low light and drinks from a plate placed under the pot.</p>
+              <div class="bar" data-care="medium"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 40% medium light, regular water"><circle cx="200" cy="7" r="7" data-w="40"/></svg></div>
+            </article>
+            <article class="tile" data-care="medium">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M10 50 L50 20 C70 30 60 55 50 75 L10 50" fill="#0a342c"/><path d="M10 50 L50 20 C70 30 60 55 50 75 L10 50" fill="#f8f5ec" opacity=".55"/></svg>
+              <h3>Polypodium</h3>
+              <p>Rock fern, about 25 cm tall. Lives on a shelf near the kitchen window and drinks from a saucer.</p>
+              <div class="bar" data-care="medium"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 40% medium light, regular water"><circle cx="200" cy="7" r="7" data-w="40"/></svg></div>
+            </article>
+            <article class="tile" data-care="high">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M10 60 C20 30 50 20 60 45 C70 70 50 80 30 70 L10 60" fill="#0a342c"/><path d="M10 60 C20 30 50 20 60 45 C70 70 50 80 30 70 L10 60" fill="#f8f5ec" opacity=".55"/></svg>
+              <h3>Phlebodium</h3>
+              <p>Orchid fern, about 25 cm tall. Drinks from a saucer and needs a few hours of morning sun.</p>
+              <div class="bar" data-care="high"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 20% high light, high water"><circle cx="200" cy="7" r="7" data-w="20"/></svg></div>
+            </article>
+          </div>
+        </div>
+        <div class="items-item">
+          <button type="button" data-filter="plant" data-value="moss" aria-expanded="false">Moss</button>
+          <details class="details" data-value="moss">
+            <summary>Moss for your shelves and tables</summary>
+            <p>Live moss grows on a shelf or a table for 9 months. It comes back every spring and takes about a week to water in.</p>
+            <dl>
+              <dt>Water</dt><dd>Once a week, by soaking the table</dd>
+              <dt>Light</dt><dd>Poor light</dd>
+              <dt>Soil</dt><dd>Peat, no pot</dd>
+            </dl>
+          </details>
+          <div class="tiles">
+            <article class="tile" data-care="low">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#0a342c"/><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#f8f5ec" opacity=".6"/></svg>
+              <h3>Hylocomas</h3>
+              <p>Grey moss, about 7 cm tall. Grows on a shelf or a small table, and looks better the longer it goes without water.</p>
+              <div class="bar" data-care="low"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 70% low light, low water"><circle cx="200" cy="7" r="7" data-w="70"/></svg></div>
+            </article>
+            <article class="tile" data-care="low">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#0a342c"/><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#f8f5ec" opacity=".55"/></svg>
+              <h3>Hypnum</h3>
+              <p>Green moss, about 5 cm tall. Grows on a shelf for 9 months, then rests through the winter.</p>
+              <div class="bar" data-care="low"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 70% low light, low water"><circle cx="200" cy="7" r="7" data-w="70"/></svg></div>
+            </article>
+            <article class="tile" data-care="medium">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#0a342c"/><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#f8f5ec" opacity=".5"/></svg>
+              <h3>Bartram's</h3>
+              <p>Bartram's moss, about 6 cm tall. Holds the shape of a pot through the winter and needs a little water.</p>
+              <div class="bar" data-care="medium"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 40% medium light, regular water"><circle cx="200" cy="7" r="7" data-w="40"/></svg></div>
+            </article>
+          </div>
+        </div>
+        <div class="items-item">
+          <button type="button" data-filter="plant" data-value="other" aria-expanded="false">Other plants</button>
+          <details class="details" data-value="other">
+            <summary>Money plants, orchids and succulents</summary>
+            <p>Every plant sold by us is tagged with its care level, so you know what to expect before you water it for the first time.</p>
+            <dl>
+              <dt>Water</dt><dd>Every 1–2 weeks</dd>
+              <dt>Light</dt><dd>Medium to bright indirect</dd>
+              <dt>Soil</dt><dd>Bark and peat mix</dd>
+            </dl>
+          </details>
+          <div class="tiles">
+            <article class="tile" data-care="medium">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M15 50 C25 25 55 20 65 45 C75 70 55 85 35 75 L15 50 Z" fill="#0a342c"/><path d="M15 50 C25 25 55 20 65 45 C75 70 55 85 35 75 L15 50 Z" fill="#f8f5ec" opacity=".6"/></svg>
+              <h3>Epipremnum</h3>
+              <p>Money plant, about 30 cm tall. Has a vine that trails over the edge of a shelf and needs pruning.</p>
+              <div class="bar" data-care="medium"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 40% medium light, regular water"><circle cx="200" cy="7" r="7" data-w="40"/></svg></div>
+            </article>
+            <article class="tile" data-care="medium">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M20 60 C30 50 45 45 55 55 C65 65 70 80 60 85 L20 60 Z" fill="#0a342c"/><path d="M20 60 C30 50 45 45 55 55 C65 65 70 80 60 85 L20 60 Z" fill="#f8f5ec" opacity=".55"/></svg>
+              <h3>Monstera</h3>
+              <p>Split-leaf, about 40 cm tall. Lives on a shelf near a window and grows a new leaf every month.</p>
+              <div class="bar" data-care="medium"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 40% medium light, regular water"><circle cx="200" cy="7" r="7" data-w="40"/></svg></div>
+            </article>
+            <article class="tile" data-care="high">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M10 60 C20 30 50 20 60 45 C70 70 50 80 30 70 L10 60 Z" fill="#0a342c"/><path d="M10 60 C20 30 50 20 60 45 C70 70 50 80 30 70 L10 60 Z" fill="#f8f5ec" opacity=".6"/></svg>
+              <h3>Orchis</h3>
+              <p>Pink orchid, about 30 cm tall. Needs a few hours of morning sun and a warm room in winter.</p>
+              <div class="bar" data-care="high"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 20% high light, high water"><circle cx="200" cy="7" r="7" data-w="20"/></svg></div>
+            </article>
+            <article class="tile" data-care="low">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#0a342c"/><path d="M30 10 C40 30 55 50 45 70 C35 90 10 80 20 60 L30 10 Z" fill="#f8f5ec" opacity=".65"/></svg>
+              <h3>Sedum</h3>
+              <p>Succulent, about 20 cm tall. Lives in a pot and only needs water when it nearly dries out.</p>
+              <div class="bar" data-care="low"><svg viewBox="0 0 200 14" role="img" aria-label="Care level: 70% low light, low water"><circle cx="200" cy="7" r="7" data-w="70"/></svg></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right toronto" id="toronto" aria-labelledby="toronto-title">
+      <h2 id="toronto-title" class="text">Toronto delivery</h2>
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 1000 400" role="img" aria-label="Delivery zones in the GTA">
+          <path d="M200 370 C220 300 260 260 300 280 C340 300 380 270 420 290 C460 310 500 284 540 300 C580 316 620 286 660 300 C700 314 740 288 780 300 C820 316 860 290 900 300 C940 310 980 280 1000 290" fill="none" stroke="#0a342c" stroke-width="1.5"/>
+          <g class="zone" fill="#f8f5ec"><path d="M200 370 C220 300 260 260 300 280 C340 300 380 270 420 290 C460 310 500 284 540 300 C580 316 620 286 660 300 C700 314 740 288 780 300 C820 316 860 290 900 300 C940 310 980 280 1000 290"/><text x="400" y="325" text-anchor="middle">Delivered</text></g>
+          <g class="zone"><circle cx="300" cy="180" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="600" cy="200" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="700" cy="210" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="400" cy="160" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="500" cy="160" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="600" cy="190" r="24" fill="#c36b4c"/></g>
+          <g class="zone"><circle cx="700" cy="180" r="24" fill="#c36b4c"/></g>
+        </svg>
+      </div>
+      <div class="price">
+        <h2 class="text">Starts at $12</h2>
+        <small>Free for orders over $60</small>
+        <table>
+          <tr><th scope="row">Small — 25 cm</th><td>$12</td></tr>
+          <tr><th scope="row">Medium — 35 cm</th><td>$18</td></tr>
+          <tr><th scope="row">Large — 45 cm</th><td>$26</td></tr>
+          <tr><th scope="row">Succulents — 10 cm</th><td>$18</td></tr>
+          <tr><th scope="row">Flowers — 20 cm</th><td>$24</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Fern &amp; Moss Co. · 1660 Queen Street, Toronto · Tue–Sun 10:00–18:00</p>
+    <p class="text--lead">Plants shipped bare-root to your shelf, not wrapped in plastic. No free water, just a saucer.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

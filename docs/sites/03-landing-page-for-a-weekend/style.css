@@ -1,0 +1,155 @@
+:root {
+  --bisque: #f0e9d7;
+  --glaze: #d1c4a7;
+  --earth: #a1887f;
+  --char: #212121;
+  --hight: #ffcc80;
+  --display: "Outfit", sans-serif;
+  --text: "Merriweather", Georgia, serif;
+  --gap: clamp(16px, 4vw, 48px);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--bisque);
+  color: var(--char);
+  font: 400 1rem/1.55 var(--text);
+}
+
+.top, .foot { width: min(100% - 2 * var(--gap), 1180px); margin-inline: var(--gap); }
+.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px; padding-block: 20px; }
+.mark { padding: 0; }
+.mark svg { fill: var(--char); width: 32px; margin-inline: 4px; }
+.mark span { font: 500 1.25rem var(--display); letter-spacing: .01em; }
+.top nav { display: flex; gap: 18px; }
+.top nav a { text-decoration: none; font-size: .875rem; color: var(--char); }
+.top nav a:hover { color: var(--hight); }
+.foot p { margin: 0; color: var(--char); }
+
+/* the three clay shapes */
+.form {
+  position: relative;
+  margin: clamp(40px, 8vw, 96px) 0 clamp(80px, 10vw, 120px);
+  padding: clamp(24px, 4vw, 48px) clamp(24px, 6vw, 72px);
+  border-radius: 40px 40px 0 0;
+  background: var(--glaze);
+  box-shadow: 0 -60px 80px -60px rgba(49, 49, 49, .45);
+}
+.form::before,
+.form::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: repeating-linear-gradient(180deg, var(--earth) 0 6px, transparent 6px 11px);
+}
+.form::before { width: 48%; clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%); }
+.form::after { right: 0; width: 52%; clip-path: polygon(0 0, 60% 0, 100% 30%, 100% 70%, 60% 100%, 0 100%); }
+
+.intro { margin: 0 0 28px; max-width: 54ch; }
+.intro p { margin: 0 0 14px; }
+
+/* availability */
+.avail { margin: 0; padding: 18px 24px; border-radius: 14px; background: var(--earth); }
+.avail .title { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin: 0 0 10px; }
+.avail .title span { font: 500 .8125rem var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--hight); }
+.avail p { margin: 0; }
+.count { display: inline-block; font: 500 2.25rem var(--display); letter-spacing: -.01em; color: var(--char); }
+.count span { color: var(--hight); }
+.btn {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border: 2px solid var(--char);
+  border-radius: 999px;
+  background: var(--char);
+  color: var(--bisque);
+  font-size: .875rem;
+  cursor: pointer;
+}
+
+/* the four detail cards */
+.group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 28px;
+  padding: 20px;
+  border-radius: 0 0 40px 40px;
+  background: var(--bisque);
+  box-shadow: 0 60px 80px -60px rgba(49, 49, 49, .3);
+}
+.card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 8px;
+  padding: 16px 14px;
+  border-radius: 22px;
+  background: var(--earth);
+  transition: transform .25s cubic-bezier(.165, .84, .44, 1);
+}
+.card:hover { transform: translateX(-6px); }
+.card svg { width: 100%; height: auto; fill: var(--hight); }
+.card h3 { margin: 0; font: 500 1.1875rem var(--display); letter-spacing: .04em; }
+.card p { margin: 0; font-size: .875rem; color: var(--char); }
+
+/* checkout form */
+.check { margin: clamp(40px, 8vw, 96px) 0 0; }
+.check::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  translate: -50% 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--hight);
+  opacity: .18;
+}
+.check h2 { margin: 0 0 26px; font: 500 clamp(2rem, 6vw, 3.25rem)/.95 var(--display); letter-spacing: -.02em; }
+.check label { display: block; margin-bottom: 6px; font-size: .8125rem; font-weight: 500; }
+.check input, select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--char);
+  border-radius: 8px;
+  background: var(--bisque);
+  color: var(--char);
+}
+.check input::placeholder { color: #8f7c6d; }
+.check select { appearance: none; background: var(--bisque); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 8px; }
+.btn-check { margin-top: 18px; }
+
+/* receipts are firable */
+.receipt { display: flex; flex-direction: column; gap: 20px; padding: clamp(24px, 4vw, 48px); background: var(--glaze); }
+.receipt .title { font: 500 clamp(2.2rem, 6vw, 3.5rem)/.9 var(--display); letter-spacing: -.03em; margin-bottom: 12px; }
+.receipt .title small { font: 500 .75rem var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--hight); margin-left: 6px; }
+.receipt dl { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin: 0; }
+.receipt dt { font-size: .75rem; color: var(--char); }
+.receipt dd { margin: 0; font: 500 1.125rem var(--display); }
+.receipt .total { margin: 0; font: 500 2.25rem var(--display); letter-spacing: -.01em; color: var(--char); }
+.receipt .foot { margin-top: auto; color: var(--char); font-size: .8125rem; }
+
+/* fade-up entry */
+.js .form { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s cubic-bezier(.165, .84, .44, 1); }
+.js .form.in { opacity: 1; transform: none; transition-delay: .15s; }
+.js .receipt { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s cubic-bezier(.165, .84, .44, 1); }
+.js .receipt.in { opacity: 1; transform: none; transition-delay: .2s; }
+
+@media (max-width: 720px) {
+  .form::before, .form::after { width: 80%; }
+  .group { grid-template-columns: 1fr; }
+  .top nav { gap: 12px; }
+  .mark { display: none; }
+  .check::before { top: -50px; width: 100px; height: 100px; }
+}

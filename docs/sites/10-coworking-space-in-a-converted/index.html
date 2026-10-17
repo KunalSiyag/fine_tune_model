@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Foundry Kochi · Industrial workspaces, Maruthamangalam</title>
+  <meta name="description" content="The Foundry Kochi offers day passes, monthly desks and hot desk memberships in a former warehouse in Maruthamangalam, Kochi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Oswald:wght@200..700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#"><span>The Foundry</span><i aria-hidden="true">01</i></a>
+    <p>Work. Connect. Build.</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="hero-grid" aria-hidden="true"><svg class="grid grid--line" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-dark" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-rust" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-arch" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-indigo" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-black" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><svg class="grid grid--line-dim" viewBox="0 0 100 100" preserveAspectRatio="none"></svg></p>
+        <h1 id="heroTitle" class="tagline">The Foundry<br><span class="hero-big">Kochi</span></h1>
+        <p class="sub">Former warehouse, Maruthamangalam, Kochi. Open since 2025. <em>Day passes · Monthly desks · Hot desk</em></p>
+      </div>
+      <nav class="tabs" aria-label="Filter pricing">
+        <li><button type="button" class="tab is-active" data-tab="daily">Daily</button></li>
+        <li><button type="button" class="tab" data-tab="monthly">Monthly</button></li>
+      </nav>
+    </section>
+
+    <section class="pricing" aria-labelledby="pricingTitle">
+      <div class="hero-grid" aria-hidden="true"><svg class="grid grid--line" viewBox="0 0 170 320" preserveAspectRatio="none"></svg></div>
+      <h2 id="pricingTitle" class="sec-title">Choose your desk.</h2>
+      <form class="lock" id="lock" hidden>
+        <label for="lock">Compare monthly desk below, or keep the tabs open.</label>
+        <input type="checkbox" id="lock" checked>
+      </form>
+      <div class="cards" data-price>
+        <div class="card card-big is-active">
+          <svg class="desk" viewBox="0 0 120 120"><rect width="120" height="72" rx="8"/><rect x="6" y="72" width="108" height="20"/><rect x="54" y="94" width="10"/><rect x="16" y="102" width="10"/><rect x="88" y="102" width="10"/><path d="M6 114h108M6 110h108"/></svg>
+          <p class="price"><span>R500</span> per day</p>
+          <p class="card-copy">Bring your laptop, a mug and a notebook. Seats 31.</p>
+          <div class="card-foot">
+            <button type="button" data-reserve>Reserve Slot</button>
+          </div>
+        </div>
+        <div class="card is-active">
+          <svg class="desk" viewBox="0 0 120 120"><rect width="120" height="72" rx="8"/><rect x="6" y="72" width="108" height="20"/><rect x="54" y="94" width="10"/><rect x="16" y="102" width="10"/><rect x="88" y="102" width="10"/><path d="M6 114h108M6 110h108"/></svg>
+          <p class="price"><span>R4 500</span> a month</p>
+          <p class="card-copy">Your own desk, set up your way. Booking starts 14 days before your start date.</p>
+          <div class="card-foot">
+            <button type="button" data-reserve>Reserve Slot</button>
+          </div>
+        </div>
+        <div class="card">
+          <svg class="desk" viewBox="0 0 120 120"><rect width="120" height="72" rx="8"/><rect x="6" y="72" width="108" height="20"/><rect x="54" y="94" width="10"/><rect x="16" y="102" width="10"/><rect x="88" y="102" width="10"/><path d="M6 114h108M6 110h108"/></svg>
+          <p class="price"><span>R2 500</span> a month</p>
+          <p class="card-copy">Swap desks weekly. Pay for what you use. 12 slots open.</p>
+          <div class="card-foot">
+            <button type="button" data-reserve>Reserve Slot</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="amen" aria-labelledby="amenTitle">
+      <h2 id="amenTitle" class="sec-title">Every desk includes.</h2>
+      <ul>
+        <li><span aria-hidden="true">✕</span><span>High-speed fibre (400 Mbps)</span></li>
+        <li><span aria-hidden="true">✕</span><span>Coffee and tea brewed to order, 7:00–20:00</span></li>
+        <li><span aria-hidden="true">✕</span><span>Meeting room 2, 12 people, with video</span></li>
+      </ul>
+    </section>
+
+    <section class="floor" aria-labelledby="floorTitle">
+      <div class="plan" aria-hidden="true">
+        <svg width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Floor plan: entrance level with the three desk areas marked in red, blue and green.">
+          <g fill="none" stroke="#151444" stroke-width="1.5">
+            <path d="M10 10 H390 V300 H10 Z" stroke-dasharray="4 6"/>
+          </g>
+          <g fill="none" stroke="var(--concrete)" stroke-width="1.5">
+            <path d="M160 14 V286 L340 286 L340 14 Z"/>
+          </g>
+          <g fill="#e8e8e8" stroke="#b87333" stroke-width="1.5">
+            <path d="M160 14 H340 V122 H160Z"/>
+          </g>
+          <g fill="#191970" stroke="#b87333" stroke-width="1.5" fill-opacity=".1">
+            <path d="M160 140 L340 140 L322 286 L178 286 Z"/>
+          </g>
+          <rect x="160" y="14" width="180" height="122" fill="#b87333" opacity=".3" stroke="#b87333" stroke-width="1"/>
+          <rect x="160" y="140" width="180" height="146" fill="#e8e8e8" opacity=".3" stroke="#e8e8e8" stroke-width="1"/>
+          <rect x="160" y="14" width="180" height="122" fill="none" stroke="#191970" stroke-width="1"/>
+          <rect x="160" y="140" width="180" height="146" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+          <rect x="160" y="14" width="180" height="122" fill="none" stroke="#b87333" stroke-width="1"/>
+          <rect x="160" y="140" width="180" height="146" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M160 122 V14" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M160 122 V140" stroke="#b87333" stroke-width="1"/>
+          <path d="M340 140 L370 140" stroke="#b87333" stroke-width="1"/>
+          <path d="M340 140 L340 122" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M200 142 L200 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M200 142 L182 286" stroke="#191970" stroke-width="1"/>
+          <path d="M220 142 L220 286" stroke="#b87333" stroke-width="1"/>
+          <path d="M220 142 L202 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M200 142 L220 142" stroke="#191970" stroke-width="1"/>
+          <path d="M240 142 L240 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M240 142 L222 286" stroke="#191970" stroke-width="1"/>
+          <path d="M280 142 L280 286" stroke="#b87333" stroke-width="1"/>
+          <path d="M280 142 L262 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M280 142 L280 142" stroke="#191970" stroke-width="1"/>
+          <path d="M300 142 L300 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M300 142 L282 286" stroke="#b87333" stroke-width="1"/>
+          <path d="M320 142 L320 286" stroke="#191970" stroke-width="1"/>
+          <path d="M320 142 L302 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M340 142 L340 286" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M340 142 L322 286" stroke="#b87333" stroke-width="1"/>
+          <path d="M370 140 L370 122" stroke="#e8e8e8" stroke-width="1"/>
+          <path d="M370 140 L370 140 L352 286" stroke="#b87333" stroke-width="1"/>
+        </svg>
+        <p class="visit" tabindex="0">Find us</p>
+      </div>
+      <div>
+        <h2 id="floorTitle">Floorplan · Entrance level</h2>
+        <ul class="dirs">
+          <li><dt>Red</dt><dd>Day passes, 31 seats, 160–280 m²</dd></li>
+          <li><dt>Blue</dt><dd>Monthly desk zone, 12 desks, 122 m²</dd></li>
+          <li><dt>Green</dt><dd>Hot desk club, 12 slots, 146 m²</dd></li>
+        </ul>
+        <div class="accordion" id="acc">
+          <button type="button" aria-expanded="true"><span>Marine Drive</span><span aria-hidden="true">+</span></button>
+          <p>Walk 5 minutes. Ferries to Ernakulam leave every 20 minutes from the jetty next to the wall.</p>
+          <button type="button" aria-expanded="true"><span>Lulu Mall</span><span aria-hidden="true">+</span></button>
+          <p>1 km, 12 minutes. 15% off at the food court with a Foundry card.</p>
+          <button type="button" aria-expanded="true"><span>Ferry terminal</span><span aria-hidden="true">+</span></button>
+          <p>10 minutes on foot. Tram to the city centre takes 22 minutes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" aria-labelledby="bookTitle">
+      <h2 id="bookTitle" class="sec-title">Reserve a slot.</h2>
+      <form class="book-form" id="book">
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required aria-describedby="err-name">
+        <span id="err-name" class="visually-hidden"></span>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+        <span id="err-email" class="visually-hidden"></span>
+
+        <label for="plan">Desired plan</label>
+        <select id="plan" name="plan" required aria-describedby="err-plan">
+          <option value="">Choose a plan</option>
+          <option value="Day Pass">Day Pass, R500</option>
+          <option value="Monthly Desk">Monthly Desk, R4500</option>
+          <option value="Hot Desk">Hot Desk, R2500</option>
+        </select>
+        <span id="err-plan" class="visually-hidden"></span>
+
+        <button type="submit" id="bookBtn">Reserve Slot</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot" aria-label="Footer">
+    <p>The Foundry Kochi · Unit 407, Old Lighthouse Road, Maruthamangalam, Kochi</p>
+    <p>Open since 2025 · +91 00 0000 0000 · hello@foundry.example</p>
+  </footer>
+
+  <p class="toast" id="toast" aria-live="polite"><span id="toastText">Your confirmation will go to the address you entered.</span></p>
+  <script src="app.js"></script>
+</body>
+</html>

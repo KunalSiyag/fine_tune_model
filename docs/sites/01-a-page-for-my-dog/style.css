@@ -1,0 +1,146 @@
+/* Van Paws — Leeds pet-grooming salon. Warm slate, crisp white, canary yellow.
+   Three-column grid: van details · pricing · booking. */
+:root {
+  --slate: #3c4348;
+  --slate-deep: #2c3236;
+  --slate-light: #545f67;
+  --white: #f0f0f0;
+  --yellow: #ffc72c;
+  --teal: #00938f;
+  --serif: "Rubik One", Impact, sans-serif;
+  --sans: "Montserrat", system-ui, sans-serif;
+  --gutter: clamp(16px, 4vw, 56px);
+  --ease: cubic-bezier(.23, 1, .32, 1);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--slate-deep);
+  color: var(--white);
+  font: 400 1rem/1.6 var(--sans);
+  overflow-x: clip;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 20px var(--gutter);
+  font-size: .875rem;
+  color: color-mix(in oklch, var(--white) 60%, var(--slate-deep));
+}
+.logo-mark { font: 1.5rem/1 var(--serif); color: var(--yellow); }
+.logo-text { font: 500 .9375rem/1.15 var(--sans); color: var(--white); }
+
+main { padding: 0 var(--gutter) 80px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+main > * { box-shadow: inset 0 -1px 0 color-mix(in oklch, var(--yellow) 14%, transparent); }
+
+/* ---------- Left column ---------- */
+.col-left { position: sticky; top: 64px; align-self: start; padding: 24px; }
+.col-left h2 { margin: 0 0 12px; font: 1.25rem/1.1 var(--serif); letter-spacing: .02em; }
+.col-left p { margin: 0 0 18px; max-width: 44ch; color: color-mix(in oklch, var(--white) 80%, var(--slate-deep)); }
+
+.leeds-map { width: 100%; height: auto; border: 0; }
+.leeds-map svg { display: block; overflow: visible; }
+.leeds-map circle { fill: none; stroke: var(--yellow); stroke-width: 2; }
+.leeds-map text {
+  font: 700 10px var(--sans);
+  letter-spacing: .12em;
+  fill: var(--white);
+  font-variant-numeric: tabular-nums;
+}
+.leeds-map text.nw { fill: var(--teal); font-weight: 500; }
+
+.summary { margin: 0; padding: 16px; border-top: 2px solid var(--yellow); }
+.summary h3 { margin: 0 0 4px; font: .875rem/1.25 var(--serif); color: color-mix(in oklch, var(--white) 70%, var(--slate-deep)); }
+.summary ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px; font-size: .875rem; color: color-mix(in oklch, var(--white) 60%, var(--slate-deep)); }
+.summary li b { font: 1.5rem var(--serif); color: var(--yellow); }
+
+/* ---------- Pricing ---------- */
+.col-price { display: flex; flex-direction: column; }
+.price-grid { margin: 0; padding: 24px 20px 18px; }
+.price-grid > div:not(.price-grid__head) { border-top: 1px solid color-mix(in oklch, var(--white) 26%, var(--slate-deep)); }
+.price-grid__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--yellow); font: 1.25rem var(--serif); }
+.price-grid__head p { margin: 0; font: .875rem var(--sans); color: color-mix(in oklch, var(--white) 66%, var(--slate-deep)); }
+
+.price-grid > div:not(.price-grid__head) > div { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid color-mix(in oklch, var(--white) 26%, var(--slate-deep)); }
+.price-grid > div:not(.price-grid__head) > div > span { font: .875rem var(--sans); color: color-mix(in oklch, var(--white) 60%, var(--slate-deep)); }
+.price-grid > div:not(.price-grid__head) > div > span:first-child { grid-column: 1; }
+.price-grid > div:not(.price-grid__head) > div > b { grid-column: 2; font: 1.5rem var(--serif); color: var(--yellow); }
+.price-grid > div:not(.price-grid__head) > div > span:last-child { grid-column: 3; align-self: end; }
+
+/* ---------- Booking ---------- */
+.col-book { position: sticky; top: 64px; }
+.book-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 20px; border-bottom: 2px solid var(--yellow); }
+.book-head h2 { margin: 0; font: 1.25rem/1.1 var(--serif); letter-spacing: .02em; }
+.book-head p { margin: 0; font: .875rem/1.6 var(--sans); color: color-mix(in oklch, var(--white) 62%, var(--slate-deep)); }
+
+.calendar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-collapse: collapse; }
+.calendar thead th { padding: 14px 12px; text-align: center; font-variant-numeric: tabular-nums; }
+.calendar tbody th { text-align: center; font-size: .75rem; color: color-mix(in oklch, var(--white) 50%, var(--slate-deep)); padding: 8px 4px; border-right: 1px solid color-mix(in oklch, var(--white) 30%, var(--slate-deep)); }
+.calendar tbody td { text-align: center; font-variant-numeric: tabular-nums; padding: 12px 8px 12px 8px; border-bottom: 1px solid color-mix(in oklch, var(--white) 26%, var(--slate-deep)); }
+.calendar .today { border-right: 2px solid var(--yellow); }
+.calendar .today::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--teal); animation: todayPulse .5s var(--ease) both; }
+@keyframes todayPulse { 50% { width: 100%; height: 100%; } }
+.today::before { content: ""; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; background: var(--yellow); transform: translate(-50%, -50%) scale(0); animation: todayPulse 1s var(--ease) both; }
+.calendar .busy { background: repeating-linear-gradient(45deg, color-mix(in oklch, var(--slate-light) 60%, var(--slate) 8%), color-mix(in oklch, var(--slate-light) 88%, var(--slate) 108%)) 0 0 / 4px 4px; color: var(--teal); font-weight: 600; }
+.calendar .free { font-weight: 500; color: color-mix(in oklch, var(--white) 80%, var(--slate-deep)); }
+.calendar .free:hover { background: var(--yellow); color: var(--slate); }
+.book-head__actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.book-head__actions button {
+  font: .875rem var(--sans);
+  color: var(--white);
+  background: var(--yellow);
+  border: 0;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+.book-head__actions button:hover { background: var(--teal); }
+.book-head__actions button:disabled { background: none; color: color-mix(in oklch, var(--white) 50%, var(--slate-deep)); cursor: default; }
+
+.book-date { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 16px 20px; border-bottom: 2px solid var(--yellow); }
+.book-date h3 { font: 1.25rem/1 var(--serif); margin: 0 0 4px; }
+.book-date p { margin: 0; font-size: .875rem; color: color-mix(in oklch, var(--white) 66%, var(--slate-deep)); }
+
+.slot-list { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; border-top: 2px solid var(--yellow); }
+.slot-list button {
+  width: 122px;
+  height: 46px;
+  font: 1rem var(--sans);
+  color: var(--white);
+  background: var(--yellow);
+  border: 0;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+.slot-list button:hover { background: var(--teal); }
+.slot-list button[aria-pressed="true"] { background: var(--teal); color: var(--white); box-shadow: inset 2px 0 0 var(--white); }
+
+.confirm { padding: 24px 20px; border-top: 2px solid var(--yellow); display: grid; gap: 6px; }
+.confirm h3 { margin: 0; font: 1.25rem/1 var(--serif); letter-spacing: .02em; }
+.confirm p { margin: 0; font-size: .875rem; color: color-mix(in oklch, var(--white) 62%, var(--slate-deep)); }
+.confirm b { font: 1.5rem var(--serif); color: var(--yellow); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  main { grid-template-columns: 1fr; }
+  .price-grid__head { flex-direction: column; }
+  .price-grid > div:not(.price-grid__head) > div { grid-template-columns: 1fr auto; }
+  .price-grid > div:not(.price-grid__head) > div > span:last-child { grid-row: span 2; grid-column: 1; justify-self: end; }
+  .book-head__actions { flex-direction: column; align-items: stretch; }
+}
+
+@media (max-width: 640px) {
+  .top { flex-direction: column; gap: 8px; }
+  .book-date { flex-direction: column; gap: 8px; align-items: flex-start; }
+}

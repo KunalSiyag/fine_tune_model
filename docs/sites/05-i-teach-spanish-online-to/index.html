@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spanish Ascent — Learn Spanish with courses, coaching and a level quiz</title>
+  <meta name="description" content="Spanish Ascent: language courses, one-on-one coaching, fluency guides and a level quiz to find your starting point.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,500;1,400&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#packages"><svg aria-hidden="true"><path d="M7 18c9-8 15-8 22 0M7 9c9 8 15 8 22 0"/></svg><span>Spanish Ascent</span></a>
+    <nav aria-label="Main">
+      <a href="#packages">Courses</a>
+      <a href="#quiz">Level quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="introTitle">
+      <div class="note">
+        <p class="note__flourish" aria-hidden="true"><path d="M4 5c3-9 11-15 20-15s17 6 20 15"/><path d="M24 12c-3 9-11 15-20 15s-17-6-20-15"/><path d="M4 19c3 9 11 15 20 15s17-6 20-15"/></p>
+        <h1 id="introTitle">Learn Spanish, <br>not just words.</h1>
+        <p class="note__lead">Spanish Ascent offers language courses in Seville, Cádiz and online. Eleven years running, we teach the language as it is spoken, not just in books.</p>
+        <a class="note__btn" href="#packages">Start here →</a>
+      </div>
+    </section>
+
+    <section class="packages" id="packages" aria-labelledby="packagesTitle">
+      <div class="packages__intro">
+        <h2 id="packagesTitle">Three ways to learn</h2>
+        <p>Choose the course that fits your time and goals. Prices are in USD, with one month of coaching included in every course.</p>
+      </div>
+      <article class="pack" data-rotate="0deg">
+        <div class="pack__border"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M0 32c10-6 22-6 32 0M24 12c18 18 18 18 36 0M0 52c10 6 22 6 32 0M40 40c18-18 18-18 36 0"/></svg></div>
+        <p class="pack__border">Level 1</p>
+        <h3 class="pack__title">Novice Voyage <small>6 weeks</small></h3>
+        <p class="pack__price"><b>$760</b><span>Classes 3×/week, 90 min each</span></p>
+        <p class="pack__copy">A solid start: the alphabet, numbers, daily routines, and speaking with confidence in a café or shop. Each class ends with a role-play.</p>
+        <ul class="pack__copy"><li>20 core vocabulary sets</li><li>40 spoken dialogues</li><li>One-on-one practice with a coach every week</li></ul>
+        <button class="pack__btn" type="button">Enroll now</button>
+      </article>
+      <article class="pack" data-rotate="0deg">
+        <div class="pack__border"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M0 32c10-6 22-6 32 0M24 12c18 18 18 18 36 0M0 52c10 6 22 6 32 0M40 40c18-18 18-18 36 0"/></svg></div>
+        <p class="pack__border">Level 2</p>
+        <h3 class="pack__title">Intermediate Flow <small>9 weeks</small></h3>
+        <p class="pack__price"><b>$1,180</b><span>Classes 4×/week, 120 min each</span></p>
+        <p class="pack__copy">Grammar and vocabulary at speed, with a focus on conversation fluency. You’ll write a letter, order in a bar, and argue with a friend without losing your train of thought.</p>
+        <ul class="pack__copy"><li>400+ vocabulary words</li><li>Grammar revised every two classes</li><li>A listening comprehension podcast</li><li>One-on-one practice twice a week</li></ul>
+        <button class="pack__btn" type="button">Enroll now</button>
+      </article>
+      <article class="pack" data-rotate="0deg">
+        <div class="pack__border"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M0 32c10-6 22-6 32 0M24 12c18 18 18 18 36 0M0 52c10 6 22 6 32 0M40 40c18-18 18-18 36 0"/></svg></div>
+        <p class="pack__border">Level 3</p>
+        <h3 class="pack__title">Fluency Summit <small>12 weeks</small></h3>
+        <p class="pack__price"><b>$1,680</b><span>Classes 5×/week, 180 min each</span></p>
+        <p class="pack__copy">Native conversation, cultural immersion, and the language of travel. You'll practice in a Seville studio and on a real trip to Cádiz.</p>
+        <ul class="pack__copy"><li>Native conversation every class</li><li>Two trips to Cádiz</li><li>Writing and reading at a native level</li><li>One-on-one practice three times a week</li></ul>
+        <button class="pack__btn" type="button">Enroll now</button>
+      </article>
+    </section>
+
+    <section class="quiz" id="quiz" aria-labelledby="quizTitle">
+      <div class="quiz__start">
+        <h2 id="quizTitle">Level quiz</h2>
+        <p>Five questions. No real Spanish is needed — just a few minutes of your day.</p>
+        <button type="button" id="startHereBtn">Start the quiz</button>
+      </div>
+      <form class="quiz__form" id="quizForm" novalidate>
+        <p class="quiz__score" id="score" role="status">0 / 5</p>
+        <p class="quiz__score" id="scoreText" role="status">Correct: 0 / 5</p>
+        <fieldset class="quiz__question">
+          <legend class="quiz__q">Which of these sentences is the most natural way to say, “I don’t understand you.”?</legend>
+          <p class="quiz__q"><small>1 point</small></p>
+          <div class="quiz__choices">
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">No entiendo.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">No entiendo. ¿Usted puede repetir?</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="1" checked><span class="quiz__label__text">No entiendo de usted.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">No entiendo nada.</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="quiz__question">
+          <legend class="quiz__q">Which number is the Spanish word for 22?</legend>
+          <p class="quiz__q"><small>1 point</small></p>
+          <div class="quiz__choices">
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Veintidós.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Veinte y dos.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="1"><span class="quiz__label__text">Veintidos.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Viente dos.</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="quiz__question">
+          <legend class="quiz__q">Which time of day is “la una”?</legend>
+          <p class="quiz__q"><small>1 point</small></p>
+          <div class="quiz__choices">
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">One hour.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">One o’clock.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="1"><span class="quiz__label__text">One minute.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">One day.</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="quiz__question">
+          <legend class="quiz__q">In Spain, how do you say “I am a teacher.”?</legend>
+          <p class="quiz__q"><small>1 point</small></p>
+          <div class="quiz__choices">
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Soy un profesor.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Soy profesora.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="1"><span class="quiz__label__text">Soy profesor de lengua.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">Soy maestro.</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="quiz__question">
+          <legend class="quiz__q">Which word fits here: “El postre de hoy es el____________.”</legend>
+          <p class="quiz__q"><small>1 point</small></p>
+          <div class="quiz__choices">
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">pastel.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">pan.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="1"><span class="quiz__label__text">flan.</span></label>
+            <label class="quiz__label"><input type="radio" name="q" value="0"><span class="quiz__label__text">empanada.</span></label>
+          </div>
+        </fieldset>
+        <button type="submit" class="quiz__next" id="nextBtn">Next question</button>
+      </form>
+      <aside class="quiz__results quiz__results--hidden" id="resultsPanel" aria-live="polite">
+        <h2>Level estimate</h2>
+        <p>You’d start at <strong>A1.</strong></p>
+        <p>That’s exactly where our Novice Voyage course begins. Our coaches start with a conversation and move from there, so you never feel like you’re guessing.</p>
+        <button type="button" class="quiz__next" id="nextBtnResults">Try again</button>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Spanish Ascent, S.L. · Avenida de la Constitución 12, Seville, Spain</p>
+    <p>+34 000 000 000 · hello@spanishascent.example</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

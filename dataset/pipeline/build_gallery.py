@@ -42,6 +42,8 @@ def main():
     ap.add_argument("run")
     ap.add_argument("--out", required=True)
     ap.add_argument("--stats", default="{}", help="JSON of headline numbers to show")
+    ap.add_argument("--standalone", action="store_true",
+                    help="wrap in a full HTML document (for GitHub Pages; the Artifact host adds its own)")
     args = ap.parse_args()
     run, out = Path(args.run), Path(args.out)
     shutil.rmtree(out, ignore_errors=True)
@@ -82,6 +84,11 @@ def main():
 
     data = json.dumps({"items": items, "stats": json.loads(args.stats)}, ensure_ascii=False)
     page = PAGE.read_text().replace("/*__DATA__*/null", data.replace("</", "<\\/"))
+    if args.standalone:
+        page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+                '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+                '<style>body{margin:0;font-size:14px;font-family:system-ui,sans-serif}img{max-width:100%}'
+                '[hidden]{display:none!important}</style>\n</head>\n<body>\n' + page + '\n</body>\n</html>\n')
     (out / "index.html").write_text(page)
     print(f"{len(items)} requests, {sum('live' in i for i in items)} live sites → {out}/index.html")
 

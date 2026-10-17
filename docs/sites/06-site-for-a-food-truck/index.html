@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Momo Magic — Home, Kathmandu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="menubar">
+    <svg class="menubar__icon" viewBox="0 0 18 16" aria-hidden="true">
+      <path d="M6 10h1v4h-1zM6.5 6h1v4h-1zM7 2h1v4h-1zM14 10h1v4h-1zM14.5 6h1v4h-1zM15 2h1v4h-1z"/>
+      <path d="M10 10h1v4h-1zM10.5 6h1v4h-1zM11 2h1v4h-1z"/>
+    </svg>
+    <p class="menubar__title"><span>Momo Magic</span><small>· Kathmandu</small></p>
+  </header>
+
+  <section class="location" aria-labelledby="locationTitle">
+    <div class="location__panel" id="locationPanel" aria-labelledby="locationTitle">
+      <p class="location__panel__addr"><span>Address</span><b>Kathmandu · Baneshwor</b></p>
+      <p class="location__panel__addr"><span>Since</span><b>2018</b></p>
+      <p class="clock" role="timer" aria-live="off"><span class="clock__tens">0</span><span class="clock__ones">0</span></p>
+      <p class="location__panel__note">Hot steamed and fried momos, since 10:00 AM</p>
+    </div>
+  </section>
+
+  <main class="content">
+    <aside class="side-panel" aria-labelledby="menuTitle">
+      <p class="side-panel__tabs" role="tablist" aria-label="Menu">
+        <button role="tab" id="tab0" aria-controls="menu0" aria-selected="true" tabindex="0" data-tab="0">Steamed</button>
+        <button role="tab" id="tab1" aria-controls="menu1" aria-selected="false" tabindex="-1" data-tab="1" aria-disabled="true">Fried</button>
+        <button role="tab" id="tab2" aria-controls="menu2" aria-selected="false" tabindex="-1" data-tab="2" aria-disabled="true">Special</button>
+      </p>
+      <div class="cards" id="menuCards" role="tabpanel" aria-labelledby="tab0">
+        <article class="card" data-tab="0" aria-labelledby="c0">
+          <h3 class="card__title" id="c0">Chicken Momo</h3>
+          <p>Tender chicken dumpling filled with butter, steamed to a golden skin.</p>
+          <p class="card__meta"><b>Rs. 240</b><small>— 5 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 240</span>
+        </article>
+        <article class="card" data-tab="0" aria-labelledby="c1">
+          <h3 class="card__title" id="c1">Mushroom Momo</h3>
+          <p>Bright caps in a buttery khoya filling, steamed.</p>
+          <p class="card__meta"><b>Rs. 200</b><small>— 5 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 200</span>
+        </article>
+        <article class="card" data-tab="0" aria-labelledby="c2">
+          <h3 class="card__title" id="c2">Prawn Momo</h3>
+          <p>Shrimp dumpling with a crisp, unbroken skin.</p>
+          <p class="card__meta"><b>Rs. 320</b><small>— 4 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 320</span>
+        </article>
+      </div>
+      <div class="cards" id="menuCards" role="tabpanel" aria-labelledby="tab1" hidden>
+        <article class="card" data-tab="1" aria-labelledby="c3">
+          <h3 class="card__title" id="c3">Fried Chicken Momo</h3>
+          <p>Crispy chicken dumpling, double-fried to order.</p>
+          <p class="card__meta"><b>Rs. 400</b><small>— 5 pieces</small></p>
+          <p class="details">Served with hot garlic chutney.</p>
+          <span class="card__price">Rs. 400</span>
+        </article>
+        <article class="card" data-tab="1" aria-labelledby="c4">
+          <h3 class="card__title" id="c4">Fried Mushroom Momo</h3>
+          <p>Crispy caps in butter, fried to order.</p>
+          <p class="card__meta"><b>Rs. 340</b><small>— 5 pieces</small></p>
+          <p class="details">Served with hot garlic chutney.</p>
+          <span class="card__price">Rs. 340</span>
+        </article>
+        <article class="card" data-tab="1" aria-labelledby="c5">
+          <h3 class="card__title" id="c5">Fried Prawn Momo</h3>
+          <p>Crunchy prawn dumpling, double-fried to order.</p>
+          <p class="card__meta"><b>Rs. 500</b><small>— 4 pieces</small></p>
+          <p class="details">Served with hot garlic chutney.</p>
+          <span class="card__price">Rs. 500</span>
+        </article>
+      </div>
+      <div class="cards" id="menuCards" role="tabpanel" aria-labelledby="tab2" hidden>
+        <article class="card" data-tab="2" aria-labelledby="c6">
+          <h3 class="card__title" id="c6">Cheese Momo</h3>
+          <p>Double cheese filling, steamed.</p>
+          <p class="card__meta"><b>Rs. 260</b><small>— 5 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 260</span>
+        </article>
+        <article class="card" data-tab="2" aria-labelledby="c7">
+          <h3 class="card__title" id="c7">Momo Lalcha</h3>
+          <p>Steamed filled dumplings with green chutney, in a bowl.</p>
+          <p class="card__meta"><b>Rs. 220</b><small>— 6 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 220</span>
+        </article>
+        <article class="card" data-tab="2" aria-labelledby="c8">
+          <h3 class="card__title" id="c8">Cheese &amp; Chicken Lachha</h3>
+          <p>Two fillings, two dumplings.</p>
+          <p class="card__meta"><b>Rs. 300</b><small>— 2 pieces</small></p>
+          <p class="details">Served hot, with tomato chutney and green chutney.</p>
+          <span class="card__price">Rs. 300</span>
+        </article>
+      </div>
+    </aside>
+
+    <section class="content__panel" aria-labelledby="menuTitle">
+      <h2 class="sr-only" id="menuTitle">Menu</h2>
+      <div class="map" id="map" aria-label="Map of Kathmandu, with Momo Magic marked">
+        <p class="map__title">Where we're cooking</p>
+        <p class="map__label">Kathmandu, Nepal</p>
+        <svg class="map__svg" viewBox="0 0 500 700" role="img" aria-describedby="mapTitle">
+          <rect width="500" height="700" fill="#d68a12" opacity=".6"/>
+          <circle cx="250" cy="170" r="200" class="state"/>
+          <path d="M250 170 l200 200 M250 170 l-180 200" class="state"/>
+          <path d="M250 170 l120 -120 M250 170 l-120 -120" class="state"/>
+          <path d="M50 400 l100 -40 M100 360 l100 40 M150 360 l100 -40 M200 360 l100 40" class="state"/>
+          <path d="M250 400 l120 -60 M250 400 l-120 -60" class="state"/>
+          <path d="M370 400 l100 -40 M420 360 l100 40 M470 360 l100 -40" class="state"/>
+          <path d="M50 500 l200 100 M150 500 l100 100 M250 500 l100 100 M350 500 l100 100" class="state"/>
+          <path d="M50 600 l200 100 M150 600 l100 100 M250 600 l100 100 M350 600 l100 100" class="state"/>
+          <path d="M50 700 l300 -20 M130 680 l300 20" class="state"/>
+          <path d="M130 680 l300 20 M130 680 l300 -20" class="state"/>
+          <path d="M130 680 l300 20 M130 680 l300 -20" class="state"/>
+          <path d="M170 640 l300 40 M170 640 l300 -40" class="state"/>
+          <path d="M170 640 l300 40 M270 640 l300 -40" class="state"/>
+          <path d="M270 640 l300 40 M270 640 l300 -40" class="state"/>
+          <circle cx="240" cy="120" r="24" class="kathmandu"/>
+          <circle cx="270" cy="140" r="14" class="circle" data-pin="0"/>
+          <circle cx="300" cy="140" r="14" class="circle" data-pin="1"/>
+          <circle cx="330" cy="140" r="14" class="circle" data-pin="2"/>
+          <circle cx="240" cy="150" r="14" class="circle" data-pin="3"/>
+          <circle cx="240" cy="160" r="14" class="circle" data-pin="4"/>
+          <circle cx="240" cy="170" r="14" class="circle" data-pin="5"/>
+          <circle cx="240" cy="180" r="14" class="circle" data-pin="6"/>
+          <circle cx="240" cy="190" r="14" class="circle" data-pin="7"/>
+          <circle cx="240" cy="200" r="14" class="circle" data-pin="8"/>
+          <circle cx="240" cy="210" r="14" class="circle" data-pin="9"/>
+          <circle cx="240" cy="220" r="14" class="circle" data-pin="10"/>
+          <circle cx="240" cy="230" r="14" class="circle" data-pin="11"/>
+          <circle cx="240" cy="240" r="14" class="circle" data-pin="12"/>
+          <circle cx="240" cy="250" r="14" class="circle" data-pin="13"/>
+          <circle cx="240" cy="260" r="14" class="circle" data-pin="14"/>
+          <circle cx="240" cy="270" r="14" class="circle" data-pin="15"/>
+          <circle cx="240" cy="280" r="14" class="circle" data-pin="16"/>
+          <circle cx="240" cy="290" r="14" class="circle" data-pin="17"/>
+          <circle cx="240" cy="300" r="14" class="circle" data-pin="18"/>
+          <circle cx="240" cy="310" r="14" class="circle" data-pin="19"/>
+          <circle cx="240" cy="320" r="14" class="circle" data-pin="20"/>
+          <circle cx="240" cy="330" r="14" class="circle" data-pin="21"/>
+          <circle cx="240" cy="340" r="14" class="circle" data-pin="22"/>
+          <circle cx="240" cy="350" r="14" class="circle" data-pin="23"/>
+          <circle cx="240" cy="360" r="14" class="circle" data-pin="24"/>
+          <circle cx="240" cy="370" r="14" class="circle" data-pin="25"/>
+          <circle cx="240" cy="380" r="14" class="circle" data-pin="26"/>
+          <circle cx="240" cy="390" r="14" class="circle" data-pin="27"/>
+          <circle cx="240" cy="400" r="14" class="circle" data-pin="28"/>
+          <circle cx="240" cy="410" r="14" class="circle" data-pin="29"/>
+          <circle cx="240" cy="420" r="14" class="circle" data-pin="30"/>
+          <circle cx="240" cy="430" r="14" class="circle" data-pin="31"/>
+          <circle cx="240" cy="440" r="14" class="circle" data-pin="32"/>
+          <circle cx="240" cy="450" r="14" class="circle" data-pin="33"/>
+          <circle cx="240" cy="460" r="14" class="circle" data-pin="34"/>
+          <circle cx="240" cy="470" r="14" class="circle" data-pin="35"/>
+          <circle cx="240" cy="480" r="14" class="circle" data-pin="36"/>
+          <circle cx="240" cy="490" r="14" class="circle" data-pin="37"/>
+          <circle cx="240" cy="500" r="14" class="circle" data-pin="38"/>
+          <circle cx="240" cy="510" r="14" class="circle" data-pin="39"/>
+          <circle cx="240" cy="520" r="14" class="circle" data-pin="40"/>
+          <circle cx="240" cy="530" r="14" class="circle" data-pin="41"/>
+          <circle cx="240" cy="540" r="14" class="circle" data-pin="42"/>
+          <circle cx="240" cy="550" r="14" class="circle" data-pin="43"/>
+          <circle cx="240" cy="560" r="14" class="circle" data-pin="44"/>
+          <circle cx="240" cy="570" r="14" class="circle" data-pin="45"/>
+          <circle cx="240" cy="580" r="14" class="circle" data-pin="46"/>
+          <circle cx="240" cy="590" r="14" class="circle" data-pin="47"/>
+          <circle cx="240" cy="600" r="14" class="circle" data-pin="48"/>
+          <circle cx="240" cy="610" r="14" class="circle" data-pin="49"/>
+          <circle cx="240" cy="620" r="14" class="circle" data-pin="50"/>
+          <circle cx="240" cy="630" r="14" class="circle" data-pin="51"/>
+          <circle cx="240" cy="640" r="14" class="circle" data-pin="52"/>
+          <circle cx="240" cy="650" r="14" class="circle" data-pin="53"/>
+          <circle cx="240" cy="660" r="14" class="circle" data-pin="54"/>
+          <circle cx="240" cy="670" r="14" class="circle" data-pin="55"/>
+          <text x="240" y="110" text-anchor="middle">Baneshwor</text>
+          <text x="240" y="285" text-anchor="middle">Kathmandu</text>
+          <path d="M240 285 l0 -250" class="label" text-anchor="middle">Momo Magic</path>
+          <path d="M240 285 l-15 -20" class="label" text-anchor="middle">Momo Magic</path>
+          <path d="M240 285 l15 -20" class="label" text-anchor="middle">Momo Magic</path>
+          <text x="240" y="715" class="map__foot">Pin the circle to see the dish</text>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

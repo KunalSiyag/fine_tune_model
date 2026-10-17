@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wheel & Wander · Intro Pottery Weekend, Edmonton</title>
+  <meta name="description" content="Two-day pottery workshop in Edmonton: form the clay, fire it, and take home your own mug. Saturday or Sunday, October 12–26, 2025.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14"/><path d="M16 2v10M20 16v6M8 16v6"/></svg>
+      <span>Wheel & Wander</span>
+    </a>
+    <nav aria-label="Workshops">
+      <a href="#workshops">Clay &amp; Fire</a>
+      <a href="#prices">Prices</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form" id="form" aria-labelledby="title">
+      <h1 id="title" class="sr-only">Wheel &amp; Wander: Intro Pottery</h1>
+      <p class="intro">Two days of turning clay on a potter's wheel, firing your work in the kiln, and taking home at least one finished mug. Each class includes everything you need, from clay to glaze coats.</p>
+
+      <section class="avail" aria-labelledby="avail-title">
+        <div class="title"><h2 id="avail-title">Availability</h2><span class="count" id="count">6 slots left</span></div>
+        <p>Book a Saturday or Sunday morning, 10:00am to 4:00pm. Each class is led by a different maker.</p>
+        <button class="btn" type="submit" id="avail-book">Book now</button>
+      </section>
+
+      <section class="group" aria-label="What to expect">
+        <article class="card"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M10 28c24 2 44 36 44 36s-2-34 44-36-44-38-44-38zm0 64c18-4 34-18 34-34s-16-30-34-34-34 30-34 34 16 30 34 34z"/><path d="M42 36v-6c0-14 11-20 24-20s24 11 24 20v6M36 70c-14-1-20 11-20 24 0 14 11 20 24 20 14-1 20-11 20-24z"/></svg><h3>Clay Included</h3><p>1 kg of porcelain, half a jar of stoneware, and enough glaze to cover every piece.</p></article>
+        <article class="card"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M20 30c24 2 44 36 44 36s-2-34 44-36-44-38-44-38zM14 2c20-4 34-18 34-34s-14-30-34-34-34 30-34 34 14 30 34 34z"/><path d="M42 36v-6c0-14 11-20 24-20s24 11 24 20v6M36 70c-14-1-20 11-20 24 0 14 11 20 24 20 14-1 20-11 20-24z"/></svg><h3>Firing Included</h3><p>Every pot you form is fired in the electric kiln and glazed to your taste.</p></article>
+        <article class="card"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M16 40c24 2 44 36 44 36s-2-34 44-36-44-38-44-38zM14 2c20-4 34-18 34-34s-14-30-34-34-34 30-34 34 14 30 34 34z"/><path d="M42 36v-6c0-14 11-20 24-20s24 11 24 20v6M36 70c-14-1-20 11-20 24 0 14 11 20 24 20 14-1 20-11 20-24z"/></svg><h3>Tools Provided</h3><p>Wheel, ribs, a sponge, and a cup for your first mug. You bring only your hands.</p></article>
+        <article class="card"><svg viewBox="0 0 72 72" aria-hidden="true"><path d="M20 30c24 2 44 36 44 36s-2-34 44-36-44-38-44-38zM14 2c20-4 34-18 34-34s-14-30-34-34-34 30-34 34 14 30 34 34z"/><path d="M42 36v-6c0-14 11-20 24-20s24 11 24 20v6M36 70c-14-1-20 11-20 24 0 14 11 20 24 20 14-1 20-11 20-24z"/></svg><h3>Beginner Friendly</h3><p>Three hours at the wheel, no experience needed. The instructor is the person at the next table.</p></article>
+      </section>
+
+      <form class="check" id="form" novalidate>
+        <h2>Book a date</h2>
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required placeholder="E.g. Lila Reyes">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@studio.example">
+        <label for="date">Pick a date</label>
+        <select id="date" name="date" required>
+          <option value="0" disabled>One weekend</option>
+          <option value="1">Sat Oct 12, 10:00am</option>
+          <option value="2">Sun Oct 19, 10:00am</option>
+          <option value="3">Sat Oct 26, 10:00am</option>
+        </select>
+        <button class="btn btn-check" type="submit">Book now</button>
+      </form>
+    </section>
+
+    <section class="receipt" id="receipt" hidden aria-hidden="true">
+      <h2 class="title">Your receipt<small>Wheel &amp; Wander</small></h2>
+      <dl>
+        <div><dt>Date</dt><dd id="r-date">Sat Oct 12</dd></div>
+        <div><dt>Time</dt><dd>10:00am to 4:00pm</dd></div>
+        <div><dt>Participant</dt><dd id="r-name">Elena Reyes</dd></div>
+        <div><dt>Price</dt><dd>$299</dd></div>
+      </dl>
+      <p class="total">Total: <span>$299</span></p>
+      <p class="foot">Pay by card on the day, or pay in full 48 hours in advance for $269.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Wheel &amp; Wander Studio, 1800 104 St NW, Edmonton · <a href="mailto:hello@wheelandwander.example">hello@wheelandwander.example</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

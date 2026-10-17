@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textbooks for Sale · Dhaka Text Exchange</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Serif+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <span class="logo">Dhaka <span>TEXT</span> Exchange</span>
+    <span class="search">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="e.g. organic chemistry, bangla, dhaka university">
+    </span>
+  </header>
+
+  <main class="cards">
+    <section class="acc" aria-label="Browse by subject">
+      <h3>Departments</h3>
+      <div class="list" role="group" aria-label="Subject departments">
+        <article class="book" data-dept="Physics">
+          <div class="meta"><span>Physics</span><b>Good</b></div>
+          <h3>B.S. Physics Vol. 3</h3>
+          <p>By Shamsul Haque, 2018, 540 pages</p>
+          <span class="price">Tk 450</span>
+        </article>
+        <article class="book" data-dept="Bangla">
+          <div class="meta"><span>Bangla</span><b>Good</b></div>
+          <h3>Shishu Shiksha</h3>
+          <p>By Ruhul Amin, 2012, 288 pages</p>
+          <span class="price">Tk 320</span>
+        </article>
+        <article class="book" data-dept="Economics">
+          <div class="meta"><span>Economics</span><b>Good</b></div>
+          <h3>Microeconomics</h3>
+          <p>By Sardar Ahmed, 2019, 420 pages</p>
+          <span class="price">Tk 380</span>
+        </article>
+        <article class="book" data-dept="Computer Science">
+          <div class="meta"><span>Computer Science</span><b>Good</b></div>
+          <h3>Organic Chemistry III</h3>
+          <p>By Ayesha Rahman, 2021, 600 pages</p>
+          <span class="price">Tk 590</span>
+        </article>
+      </div>
+      <h3>Old Textbooks</h3>
+      <div class="list" role="group" aria-label="Old textbooks">
+        <article class="book">
+          <div class="meta"><span>Old</span><b>Poor</b></div>
+          <h3>Medical Microbiology</h3>
+          <p>By Dr. Sofia Khan, 1997, 520 pages</p>
+          <span class="price">Tk 210</span>
+        </article>
+        <article class="book">
+          <div class="meta"><span>Old</span><b>Good</b></div>
+          <h3>Dhaka University Guide 2023</h3>
+          <p>Publishing House Dhaka, 2022, 312 pages</p>
+          <span class="price">Tk 280</span>
+        </article>
+      </div>
+      <h3>Useful Guides</h3>
+      <div class="list" role="group" aria-label="Useful guides">
+        <article class="book">
+          <div class="meta"><span>Guides</span><b>Good</b></div>
+          <h3>How to Write a Thesis</h3>
+          <p>By Dr. Mahbubul Alam, 2020, 160 pages</p>
+          <span class="price">Tk 240</span>
+        </article>
+        <article class="book">
+          <div class="meta"><span>Guides</span><b>Good</b></div>
+          <h3>Research Methodology</h3>
+          <p>By Shahana Begum, 2017, 220 pages</p>
+          <span class="price">Tk 310</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="carousel" aria-label="Featured deals">
+      <div class="slides" id="slides">
+        <article class="slide">
+          <span class="img" aria-hidden="true">
+            <svg viewBox="0 0 120 140" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Dhaka skyline with a book open on the steps">
+              <path class="sky" d="M0 0 H120 V140 H0Z"/>
+              <path class="clouds" d="M0 20 Q60 8 120 20 T120 90 T120 140"/>
+              <text x="32" y="26" class="text">Dhaka</text>
+              <text x="32" y="44" class="text">Exchange</text>
+              <text x="32" y="64" class="text">Bookshop</text>
+              <text x="32" y="84" class="text">2nd Floor</text>
+              <text x="32" y="104" class="text">Kazi Nazrul Chowdary Road</text>
+              <text x="32" y="124" class="text">Dhaka</text>
+            </svg>
+          </span>
+          <h3>Quantum Mechanics for Beginners</h3>
+          <p>370 pages, 2023, 384 colour illustrations. Includes a 12-page colour insert.</p>
+        </article>
+        <article class="slide">
+          <span class="img" aria-hidden="true">
+            <svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two book covers stacked on a bookshelf">
+              <path class="sky" d="M0 0 H100 V120 H0Z"/>
+              <path class="clouds" d="M0 20 Q50 10 100 20 T100 100 T100 120"/>
+              <rect x="30" y="35" width="40" height="75" rx="4" fill="#9a8b7b" stroke="#9a8b7b"/>
+              <rect x="30" y="35" width="40" height="75" rx="4" fill="#a85050" stroke="#a85050"/>
+              <text x="40" y="62" class="text">Axial</text>
+            </svg>
+          </span>
+          <h3>Organic Chemistry III</h3>
+          <p>By Ayesha Rahman, 2021, 600 pages, 800+ solved problems. New print.</p>
+        </article>
+        <article class="slide">
+          <span class="img" aria-hidden="true">
+            <svg viewBox="0 0 140 160" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three book covers stacked on a bookcase">
+              <path class="sky" d="M0 0 H140 V160 H0Z"/>
+              <path class="clouds" d="M0 20 Q70 10 140 20 T140 130 T140 160"/>
+              <rect x="40" y="30" width="60" height="110" rx="4" fill="#9a8b7b" stroke="#9a8b7b"/>
+              <rect x="40" y="30" width="60" height="110" rx="4" fill="#a85050" stroke="#a85050"/>
+              <rect x="40" y="30" width="60" height="110" rx="4" fill="#9a8b7b" stroke="#9a8b7b"/>
+              <text x="60" y="66" class="text">Mech</text>
+              <text x="60" y="92" class="text">Chem</text>
+              <text x="60" y="118" class="text">Mech</text>
+            </svg>
+          </span>
+          <h3>Thermodynamics</h3>
+          <p>By Dr. Farah Jahan, 2022. 416 pages, 150+ diagrams. Includes a thermodynamic tables booklet.</p>
+        </article>
+        <article class="slide">
+          <span class="img" aria-hidden="true">
+            <svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two book covers on a bookcase">
+              <path class="sky" d="M0 0 H100 V120 H0Z"/>
+              <path class="clouds" d="M0 20 Q50 10 100 20 T100 90 T100 120"/>
+              <rect x="20" y="30" width="60" height="70" rx="4" fill="#9a8b7b" stroke="#9a8b7b"/>
+              <rect x="20" y="30" width="60" height="70" rx="4" fill="#a85050" stroke="#a85050"/>
+              <text x="40" y="56" class="text">Book</text>
+              <text x="40" y="82" class="text">Book</text>
+            </svg>
+          </span>
+          <h3>Principles of Economics</h3>
+          <p>12th edition, 2020, 680 pages, updated 2024 edition. Includes a 2024 data supplement.</p>
+        </article>
+        <article class="slide">
+          <span class="img" aria-hidden="true">
+            <svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two book covers on a bookcase">
+              <path class="sky" d="M0 0 H100 V120 H0Z"/>
+              <path class="clouds" d="M0 20 Q50 10 100 20 T100 90 T100 120"/>
+              <rect x="20" y="30" width="60" height="70" rx="4" fill="#9a8b7b" stroke="#9a8b7b"/>
+              <rect x="20" y="30" width="60" height="70" rx="4" fill="#a85050" stroke="#a85050"/>
+              <text x="40" y="56" class="text">Book</text>
+              <text x="40" y="82" class="text">Book</text>
+            </svg>
+          </span>
+          <h3>Elementary Mathematics</h3>
+          <p>For 10th and 12th, 2016 edition. 420 pages, 350 solved problems, 2024 updated with 40 new problems.</p>
+        </article>
+      </div>
+      <nav class="nav" aria-label="Carousel navigation">
+        <button type="button" data-dir="-1" aria-label="Previous slide">←</button>
+        <button type="button" data-dir="1" aria-label="Next slide">→</button>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Dhaka Text Exchange · 2nd Floor, Kazi Nazrul Chowdary Road, Dhaka-1215</p>
+    <form class="form" id="form">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="msg">
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" maxlength="100" placeholder="e.g. Textbook request" required aria-describedby="msg">
+      <button type="submit">Send a message</button>
+      <p class="msg" id="msg" aria-live="polite"></p>
+    </form>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

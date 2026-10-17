@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a van groom — Van Paws, Leeds</title>
+  <meta name="description" content="Book a van groom with Van Paws on the Airedale road, Leeds. Small to extra-sized dogs, Saturday mornings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+One&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <p class="logo-mark">VP</p>
+    <p class="logo-text">Van Paws</p>
+    <p class="logo-text">Pet grooming · Leeds</p>
+  </header>
+
+  <main>
+    <section class="col-left" aria-labelledby="title">
+      <h2 id="title">Van 007</h2>
+      <div class="leeds-map" id="leedsMap" aria-hidden="true"></div>
+      <p>We travel to you — in a 2019 Fiat Ducato, with a 12-amp mains, a heated drying rail, and a 60-kg capacity so even the big boys can come along.</p>
+      <dl class="summary">
+        <div class="summary__item"><b>04</b><span>Years on the road</span></div>
+        <div class="summary__item"><b>150</b><span>Bookings a month</span></div>
+        <div class="summary__item"><b>12</b><span>Postcodes we cover</span></div>
+      </dl>
+    </section>
+
+    <section class="col-price" aria-labelledby="priceTitle">
+      <h2 id="priceTitle" class="sr-only">Price list</h2>
+      <div class="price-grid">
+        <div class="price-grid__head">
+          <h3>Choose your dog</h3>
+          <p>From £35</p>
+        </div>
+        <div data-price data-size="S">
+          <span>Small — up to 5 kg</span>
+          <b>£35</b>
+          <span><span class="sr-only">Wash &amp; trim</span></span>
+        </div>
+        <div data-price data-size="M">
+          <span>Medium — 5–15 kg</span>
+          <b>£50</b>
+          <span><span class="sr-only">Wash &amp; trim</span></span>
+        </div>
+        <div data-price data-size="L">
+          <span>Large — 15–30 kg</span>
+          <b>£65</b>
+          <span><span class="sr-only">Wash &amp; trim</span></span>
+        </div>
+        <div data-price data-size="X">
+          <span>Extra — 30 kg+</span>
+          <b>£80</b>
+          <span><span class="sr-only">Wash &amp; trim</span></span>
+        </div>
+        <div class="price-grid__head">
+          <h3>Choose a service</h3>
+          <p>£35</p>
+        </div>
+        <div class="price-grid__head">
+          <h3>Ready to book?</h3>
+          <p id="bookPrice" aria-live="polite">£35</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="col-book" aria-labelledby="bookTitle">
+      <div class="book-head">
+        <h2 id="bookTitle">Pick a time</h2>
+        <div class="book-head__actions">
+          <button id="next" type="button">Next &rarr;</button>
+          <button id="back" type="button" hidden>Back</button>
+          <button type="submit" id="book" form="booking" aria-label="Book">
+            Confirm my booking
+          </button>
+        </div>
+      </div>
+      <form id="booking" novalidate>
+        <div class="book-date" aria-live="polite">
+          <div class="sr-only">Today: <span id="today">Saturday 28 August</span></div>
+          <h3 id="bookingDate">—</h3>
+          <p id="bookingDateText">Pick a date</p>
+        </div>
+        <div class="calendar" id="calendar" role="group" aria-label="Calendar">
+          <thead></thead>
+          <tbody></tbody>
+        </div>
+        <div class="slot-list" id="slotList" role="radiogroup" aria-labelledby="slotListTitle">
+          <p class="sr-only" id="slotListTitle">Booked time slots</p>
+        </div>
+        <p class="confirm" id="confirm" hidden>
+          <h3 id="summaryTitle">Booking confirmed</h3>
+          <p id="summaryText">—</p>
+          <p class="confirm__code"><b id="confirmCode">—</b></p>
+          <p id="confirmMsg"></p>
+          <button type="button" id="confirmClose">Change booking</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="top">
+    <p>Van Paws · 123 Airedale Road, Leeds · 01632 960411</p>
+    <p>Weekends · Saturdays only · No cage use · Dogs welcome, no refund if they refuse to sit</p>
+  </footer>
+
+  <dialog class="confirm-modal" id="confirmModal">
+    <div class="confirm">
+      <h3 id="confirmTitle">Booking confirmed</h3>
+      <p id="confirmText">—</p>
+      <p class="confirm__code"><b id="confirmCode">—</b></p>
+      <p id="confirmMsg"></p>
+      <button type="button" id="confirmClose">Change booking</button>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
